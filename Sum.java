@@ -1,5 +1,7 @@
+// Assignment question 1
 // WAP to print the sum of two numbers
-public class Sum {
+
+public class Sum{
     
     public static void main(String args[]){
 
