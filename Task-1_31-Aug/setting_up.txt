@@ -1,0 +1,9 @@
+2. Explain the process of setting up the Java environment variables.
+
+->  After installing the jdk, locate the jdk installed in your pc and inside the jdk folder
+    there should be a 'bin' folder inside it. Copy this path and then search environment variables 
+    on your pc and select 'Edit the environment variables' and then from the Advanced tab 
+    select Environment variables and select System variables and then set Path.
+    Add a new path and paste that copied path into it.
+    Check in command prompt by typing 'java -version', it should display the version installed 
+    in your pc and confirms that it is installed.
