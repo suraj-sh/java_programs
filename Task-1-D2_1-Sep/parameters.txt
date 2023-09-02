@@ -47,9 +47,3 @@
     In all these cases, the method definition specifies the data type and names of the parameters it expects. 
     When you call the method, we provide actual values, objects, or arrays as arguments. 
     The method can then operate on these parameters within its code block.
-
-
-
-
-
-Regenerate
