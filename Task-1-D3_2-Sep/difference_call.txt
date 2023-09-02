@@ -1,0 +1,39 @@
+2.4 Distinguish between call by value and call by reference with appropriate code snippets
+
+->  1.  Call by value: we have to pass a value to a method as a parameter
+        Example:
+        public class CallbyValue{
+            int x;  // same value is assigned to this class variable 
+
+            public void add(int a){     // method 
+
+                x = a + 5;  // x becomes 15
+            }
+
+            public static void main(String[] args){
+
+                CallbyValue cv = new CallbyValue(); // declaring object
+                cv.add(10);     // passing value to method
+                System.out.println(cv.x);   // using object accessing that variable
+            }
+        }
+
+
+    2.  Call by reference: we have to pass object to a method as a parameter
+        Example:
+        public class CallbyRef{
+            int x;  // same value is assigned to this class variable 
+
+            public void add(CallbyRef a){     // datatype of parameter should be same as object  
+
+                x = a.x + 5;  // x becomes 15
+                System.out.println(x);
+            }
+
+            public static void main(String[] args){
+
+                CallbyRef cr = new CallbyRef(); // declaring object
+                cr.x = 10;    
+                cr.add(cr.x);   // passing object to method
+            }
+        }
