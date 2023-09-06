@@ -1,0 +1,24 @@
+17. Explain the difference between equals(), equalsIgnoreCase(), and compareTo() methods of the String class.
+
+->  1.  equals(Object obj):
+        - Compares strings for content equality.
+        - Case-sensitive: "hello" and "Hello" are different.
+        Example:    String str1 = "Hello";
+                    String str2 = "hello";
+                    boolean isEqual = str1.equals(str2); // Returns false
+
+
+    2.  equalsIgnoreCase(String anotherString):
+        - Compares strings for content equality while ignoring case.
+        - Case-insensitive: "hello" and "Hello" are considered equal.
+        Example:    String str1 = "Hello";
+                    String str2 = "hello";
+                    boolean isEqualIgnoreCase = str1.equalsIgnoreCase(str2); // Returns true
+
+
+    3.  compareTo(String anotherString):
+        - Compares strings lexicographically (based on Unicode values).
+        - Case-sensitive: "apple" is less than "banana" lexicographically.
+        Example:    String str1 = "apple";
+                    String str2 = "banana";
+                    int result = str1.compareTo(str2); // Returns a negative value

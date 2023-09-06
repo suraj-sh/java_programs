@@ -1,0 +1,51 @@
+9. Explain the concept of Java operators with suitable examples.
+
+->  1. Arithmetic operators : These operators perform basic mathematical operations.
+    int a = 10, b = 5;
+    int sum = a + b;        // Addition
+    int difference = a - b; // Subtraction
+    int product = a * b;    // Multiplication
+    int quotient = a / b;   // Division
+    int remainder = a % b;  // Modulus (remainder after division)
+
+    2. Comparison Operators : These operators compare values and return boolean results.
+    int x = 7, y = 10;
+    boolean isEqual = x == y;           // Equal to
+    boolean isNotEqual = x != y;        // Not equal to
+    boolean isGreater = x > y;          // Greater than
+    boolean isLess = x < y;             // Less than
+    boolean isGreaterOrEqual = x >= y;  // Greater than or equal to
+    boolean isLessOrEqual = x <= y;     // Less than or equal to
+
+    3. Logical Operators : Logical operators are used to combine boolean expressions.
+    boolean p = true, q = false;
+    boolean andResult = p && q; // Logical AND
+    boolean orResult = p || q;  // Logical OR
+    boolean notResult = !p;     // Logical NOT
+
+    4. Assignment Operators : These operators assign values to variables.
+    int value = 15;
+    value += 5;   // Equivalent to: value = value + 5;
+    value -= 3;   // Equivalent to: value = value - 3;
+    value *= 2;   // Equivalent to: value = value * 2;
+    value /= 4;   // Equivalent to: value = value / 4;
+    value %= 3;   // Equivalent to: value = value % 3;
+
+    5. Increment and Decrement Operators : These operators increase or decrease a value by 1.
+    int counter = 0;
+    counter++; // Increment by 1
+    counter--; // Decrement by 1
+
+    6. Conditional (Ternary) Operator : This operator provides a shortcut for conditional expressions.
+    int num = 7;
+    // If num is even, result will be "Even"; otherwise, it will be "Odd".
+    String result = (num % 2 == 0) ? "Even" : "Odd";
+
+    7. Bitwise Operators : These operators perform operations at the bit level.
+    int a = 5, b = 3;
+    int bitwiseAnd = a & b; // Bitwise AND
+    int bitwiseOr = a | b;  // Bitwise OR
+    int bitwiseXor = a ^ b; // Bitwise XOR
+
+
+

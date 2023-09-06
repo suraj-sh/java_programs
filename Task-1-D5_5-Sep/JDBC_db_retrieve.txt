@@ -1,0 +1,72 @@
+2.20 How would you retrieve data from a database using JDBC and display it in your Java program?
+
+->  To retrieve data from a database using JDBC and display it in your Java program:
+    1.  Establish a Database Connection: 
+        Connect to your database using JDBC, as outlined in the previous responses.
+    2.  Create and Execute SQL Query: 
+        Use a `Statement` or `PreparedStatement` object to create an SQL query and execute it. 
+        The query should retrieve the data you want from the database.
+
+    3.  Retrieve and Process the Results: 
+        If the query returns results (e.g., a `SELECT` statement), you need to fetch and process the results. 
+        JDBC provides a `ResultSet` object to handle result sets.
+
+    4.  Display the Data: 
+        Display the retrieved data in your Java program. You can use various techniques depending on your 
+        program's interface (console, GUI, web application, etc.).
+
+        
+        Java program that retrieves data from a database and displays it in the console:
+
+
+        import java.sql.Connection;
+        import java.sql.DriverManager;
+        import java.sql.ResultSet;
+        import java.sql.SQLException;
+        import java.sql.Statement;
+
+        public class RetrieveDataWithJDBC{
+
+            public static void main(String[] args){
+
+                Connection connection = null;
+                Statement statement = null;
+                ResultSet resultSet = null;
+
+                try{
+                    // 1. Establish a database connection (replace with your database details)
+                    String url = "jdbc:mysql://localhost:3306/mydatabase";
+                    String username = "your_username";
+                    String password = "your_password";
+                    connection = DriverManager.getConnection(url, username, password);
+
+                    // 2. Create and execute an SQL query
+                    statement = connection.createStatement();
+                    String sqlQuery = "SELECT * FROM mytable";
+                    resultSet = statement.executeQuery(sqlQuery);
+
+                    // 3. Retrieve and display the data
+                    while(resultSet.next()){
+                        // Assuming 'mytable' has columns 'id' and 'name'
+                        int id = resultSet.getInt("id");
+                        String name = resultSet.getString("name");
+
+                        System.out.println("ID: " + id + ", Name: " + name);
+                    }
+                } 
+                catch(SQLException e){
+                    e.printStackTrace();
+                }
+                finally{
+                    // 4. Close resources in reverse order (ResultSet, Statement, Connection)
+                    try{
+                        if (resultSet != null) resultSet.close();
+                        if (statement != null) statement.close();
+                        if (connection != null) connection.close();
+                    } 
+                    catch(SQLException e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }

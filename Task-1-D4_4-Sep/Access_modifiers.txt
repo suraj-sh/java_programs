@@ -1,0 +1,105 @@
+2.15 Discuss the access modifiers (private, protected, default, and public) with appropriate examples.
+
+->  1. Private : The private access modifier is accessible only within class
+    Example:
+    package accessmodifiers;
+    class A{
+
+        // Private access modifier
+        private int a = 100;    // these variables and methods cannot be accessed outside the class 
+        private void m1(){     
+
+            System.out.println(a);
+        }
+    }
+
+    public class Sample {
+        
+        public static void main(String[] args) {
+            
+            A obj = new A();    
+            obj.m1();   // throws error
+        }
+    }
+
+    2. Default : If any specifier is not mentioned then by default it is treated as "default"
+                 It is accessible only within package (accross multiple classes in same package)
+    Example:
+    package accessmodifiers;
+    class A{
+
+        int a = 100;    // these variables and methods cannot be accessed outside the class 
+        void m1(){     
+
+            System.out.println(a);
+        }
+    }
+
+    public class Sample {
+        
+        public static void main(String[] args) {
+            
+            A obj = new A();    
+            obj.m1();
+        }
+    }
+
+    3. Protected : It is accessible within and outside package but through inheritance only
+    Example:
+    package accessmodifiers;
+
+    public class A{
+
+        protected int a = 100;
+
+        protected void m1(){
+            System.out.println(a);
+        }
+    }
+
+    public class Sample{
+        public static void main(String[] args){
+            A obj = new A();
+            obj.m1();
+        }
+    }
+
+    package accessmodifiers2;
+
+    public class Sample2 extends A{
+        public static void main(String[] args){
+            Sample2 obj = new Sample2();
+            obj.a = 200; // This works because Sample2 is a subclass of A
+            obj.m1();    // Use the inherited method to access 'a'
+        }
+    }
+
+    4. Public : Everywhere
+    Example:
+    package accessmodifiers;
+
+    public class A{
+
+        public int a = 100;
+
+        public void m1(){
+            System.out.println(a);
+        }
+    }
+
+    public class Sample{
+        public static void main(String[] args){
+            A obj = new A();
+            obj.m1();
+        }
+    }
+
+    package accessmodifiers2;
+
+    public class Sample2 extends A{
+        public static void main(String[] args){
+            A obj = new A();
+            obj.a = 200;
+            obj.m1();    
+        }
+    }

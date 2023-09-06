@@ -1,0 +1,6 @@
+1. How do you download and install the latest version of Java on your system?
+
+->  Search for the java oracle website (https://www.oracle.com/in/java/technologies/downloads/)
+    and then choose the jdk version suitable for you (LTS or latest version).
+    The package is available in Windows, Linux & MacOS. Select it and it will download the package, 
+    click the downloaded file and the installation wizard will install the jdk in your pc.

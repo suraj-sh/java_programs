@@ -1,0 +1,49 @@
+2.3 How do you pass parameters to methods in Java? Provide examples.
+
+->  1. Passing Primitive Data Types:
+    We can pass primitive data types (int, double, char, etc.) as parameters to methods.
+    Example:
+    public static int add(int a, int b){
+        return a + b;
+    }
+    // Example usage:
+    int result = add(5, 3); // Here, 5 and 3 are passed as parameters to the 'add' method.
+
+    2. Passing Objects as Parameters:
+    We can pass objects as parameters to methods. Objects are instances of classes we define.
+    Example:
+    class Student{
+        String name;
+        int age;
+
+        public Student(String name, int age){
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    public static void displayStudentInfo(Student student) {
+        System.out.println("Name: " + student.name);
+        System.out.println("Age: " + student.age);
+    }
+    // Example usage:
+    Student alice = new Student("Alice", 20);
+    displayStudentInfo(alice); // The 'alice' object is passed as a parameter to 'displayStudentInfo'.
+
+    3. Passing Arrays as Parameters:
+    We can pass arrays as parameters to methods.
+    Example:
+    public static int sumArray(int[] arr){
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+        return sum;
+    }
+    // Example usage:
+    int[] numbers = {1, 2, 3, 4, 5};
+    int result = sumArray(numbers); // The 'numbers' array is passed as a parameter to 'sumArray'.
+
+    In all these cases, the method definition specifies the data type and names of the parameters it expects. 
+    When you call the method, we provide actual values, objects, or arrays as arguments. 
+    The method can then operate on these parameters within its code block.

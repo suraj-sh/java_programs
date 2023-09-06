@@ -1,0 +1,35 @@
+2.8 How does the this keyword work in Java? Illustrate its usage.
+
+->  In Java, the this keyword is a reference to the current instance of a class. 
+    It is used to differentiate between instance variables (class members) 
+    and method parameters or local variables that have the same name. 
+    'this' is primarily used within instance methods and constructors to access 
+    or modify instance variables.
+
+    Example:
+    public class Person{
+
+        private String name;
+        private int age;
+
+        public Person(String name, int age){
+
+            this.name = name;
+            this.age = age;
+        }
+
+        public void printDetails(){
+
+            System.out.println("Name: " + this.name); // Using 'this' to access instance variable
+            System.out.println("Age: " + this.age);   // Using 'this' to access instance variable
+        }
+
+        public static void main(String[] args){
+            
+            Person person1 = new Person("Alice", 25);
+            Person person2 = new Person("Bob", 30);
+
+            person1.printDetails();
+            person2.printDetails();
+        }
+    }
