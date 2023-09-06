@@ -1,9 +1,0 @@
-What are the key features and components of the Eclipse IDE?
-
-->  Key features of Eclipse IDE:
-    1.  Workspace: A central place to organize and manage your projects, files, and settings.
-    2.  Editor: Code editors with helpful features like highlighting, autocomplete, and error checking.
-    3.  Plugins: Add-ons that expand Eclipse's capabilities for different languages and tools.
-    4.  Debugging: A powerful tool to find and fix errors in your code step by step.
-    5.  Version Control: Integrates with systems like Git to help track and manage code changes.
-    6.  Perspectives: Custom layouts for different tasks, like coding, debugging, and designing interfaces.
