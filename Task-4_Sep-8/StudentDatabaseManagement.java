@@ -18,7 +18,7 @@
         Remember to replace your_username and your_password with your MySQL credentials.
         In the program, you will need to use the Statement or PreparedStatement objects to execute SQL queries 
         for CRUD operations. You can use ResultSet to retrieve data from database queries. */
-
+        
 import java.sql.*;
 import java.util.Scanner;
 
