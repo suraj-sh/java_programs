@@ -1,0 +1,32 @@
+3.1 Explain the concept of functional interfaces in Java.
+
+->  In Java, a functional interface is an interface that contains exactly one abstract method. 
+    Functional interfaces are a key concept in functional programming and are central to 
+    Java's support for lambda expressions and method references.
+
+    Here are the key points to understand about functional interfaces in Java:
+
+    1.  Single Abstract Method (SAM): 
+        A functional interface must have exactly one abstract (unimplemented) method. 
+        This method is often referred to as the "functional method" or "SAM."
+
+    2.  Lambda Expression Usage: 
+        Functional interfaces are commonly used with lambda expressions. 
+        A lambda expression provides a concise way to implement the single abstract method 
+        of the functional interface.
+
+    3.  @FunctionalInterface Annotation: 
+        Although not required, it's a good practice to annotate functional interfaces with 
+        the `@FunctionalInterface` annotation. This annotation serves as a compiler hint and helps 
+        ensure that the interface remains functional by generating an error if more than one abstract 
+        method is added to it.
+
+    Here's an example of a functional interface in Java:
+
+    @FunctionalInterface
+    interface Calculator {
+        int calculate(int a, int b);
+    }
+
+    In this example, `Calculator` is a functional interface because it has a single abstract method, 
+    `calculate(int a, int b)`.

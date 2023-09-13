@@ -1,0 +1,24 @@
+3.2 Illustrate the use of the Consumer functional interface with examples
+
+->  The Consumer functional interface in Java represents an operation that takes an input 
+    and performs some action on it without returning a result. It's often used for actions like 
+    printing, logging, or modifying objects.
+
+    Exammple:
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.function.Consumer;
+
+    public class ConsumerExample {
+        public static void main(String[] args) {
+            List<String> fruits = Arrays.asList("Apple", "Banana", "Cherry", "Date");
+
+            // Using a Consumer to print each element
+            Consumer<String> printFruit = (fruit) -> System.out.println("Fruit: " + fruit);
+
+            fruits.forEach(printFruit);
+        }
+    }
+
+    In this example, we create a Consumer called printFruit that takes a String and prints it. 
+    We then use forEach to apply this Consumer to each element in the list, printing all the fruits.

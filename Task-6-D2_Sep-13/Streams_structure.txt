@@ -1,0 +1,44 @@
+6.3 Illustrate the basic structure and syntax of using streams.
+
+->  The basic structure and syntax of using streams in Java follow this pattern:
+
+    1. Source: Start with a source of data, such as a collection (e.g., List) or an array.
+
+    2. Stream Creation: Create a stream from the source using the `.stream()` method.
+
+    3. Intermediate Operations: Apply one or more intermediate operations to transform or filter the data. 
+       Common intermediate operations include `filter`, `map`, and `sorted`. These operations are chainable.
+
+    4. Terminal Operation: Execute a terminal operation to perform a computation or produce a result. 
+       Common terminal operations include `forEach`, `collect`, and `reduce`. 
+       A stream can have only one terminal operation, and it triggers the processing of data.
+
+    Here's a simple example illustrating this structure:
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class StreamExample{
+        public static void main(String[] args){
+            List<String> words = Arrays.asList("apple", "banana", "cherry", "date");
+
+            // Create a stream from the list
+            words.stream()
+                // Intermediate operation: Filter words starting with 'c'
+                .filter(word -> word.startsWith("c"))
+                // Intermediate operation: Transform words to uppercase
+                .map(String::toUpperCase)
+                // Terminal operation: Print each word
+                .forEach(System.out::println);
+        }
+    }
+
+    In this example:
+
+    - We start with a list of words.
+    - We create a stream from the list using `.stream()`.
+    - We chain intermediate operations to filter words starting with 'c' and transform them to uppercase.
+    - Finally, we use the terminal operation `.forEach` to print the filtered and transformed words.
+
+    This is a basic structure for using streams, where you can customize the intermediate and terminal 
+    operations to suit your data processing needs.

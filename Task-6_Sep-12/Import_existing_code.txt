@@ -1,0 +1,9 @@
+1.7 Explain the steps to import existing code into your development environment.
+
+->  To import existing code into your development environment:
+    1. Open your development environment (e.g., IntelliJ IDEA).
+    2. Go to "File" > "Open" or "Import."
+    3. Navigate to the directory containing your code.
+    4. Select the code folder or project file (e.g., a .java or .py file).
+    5. Click "Open" or "Import."
+    6. Your existing code is now loaded and ready for editing and development.

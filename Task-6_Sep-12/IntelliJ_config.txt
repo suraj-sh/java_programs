@@ -1,0 +1,51 @@
+1.5 Describe the essential configurations you need to set up in IntelliJ IDEA.
+
+->  Configurations to set up in IntelliJ IDEA:
+    1.  JDK Configuration:
+        - Specify the Java Development Kit (JDK) path under "Project Structure" > "Project" 
+        to match your project's requirements.
+
+    2.  Project SDK:
+        - Set the Project SDK to the JDK version you want to use for your project.
+
+    3.  Project Language Level:
+        - Ensure the project language level matches your code compatibility needs (e.g., Java 8, Java 11).
+
+    4.  Code Style:
+        - Configure code formatting and style preferences under "Editor" > "Code Style" to maintain consistent code.
+
+    5.  Version Control:
+        - If using version control (e.g., Git), configure your VCS settings and link your VCS account.
+
+    6.  Plugins:
+        - Install and enable plugins for additional language support, tools, and frameworks.
+
+    7.  Run/Debug Configurations:
+        - Create run/debug configurations for your projects (e.g., application, tests) under "Run" > "Edit Configurations."
+
+    8.  Keymap:
+        - Familiarize yourself with the keymap or customize it to match your preferred keyboard shortcuts.
+
+    9.  Appearance and Theme:
+        - Adjust the appearance, theme, and font settings in "Preferences" > "Editor" to improve readability.
+
+    10. File Templates:
+        - Customize file templates for generating code snippets under "Preferences" > "Editor" > "File and Code Templates."
+
+    11. Version Control Ignore:
+        - Specify files and directories to ignore in version control under "Preferences" > "Version Control."
+
+    12. Editor Preferences:
+        - Customize your editor preferences for indentation, code completion, and highlighting under "Preferences" > "Editor."
+
+    13. Global Libraries:
+        - Add global libraries for external dependencies used across multiple projects.
+
+    14. Build Tools Integration:
+        - Configure integration with build tools like Maven or Gradle for smoother project management.
+
+    15. Code Inspection Profiles:
+        - Set up code inspection profiles to enforce coding standards and identify issues.
+
+    16. GitHub/GitLab Integration:
+        - Connect your GitHub or GitLab account for seamless integration with code repositories.

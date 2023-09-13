@@ -1,0 +1,36 @@
+7.1 What is the purpose of the map() operation in a stream?
+
+->  The `map()` operation in a stream is used to transform each element of the stream into 
+    another value using a given function. It applies the provided function to each element 
+    and produces a new stream with the transformed values.
+
+    Purpose of `map()` operation:
+    - To perform a one-to-one transformation on each element of the stream.
+    - It helps convert one type of data into another or apply a specific operation to each 
+      element in the stream.
+
+    Example:
+
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.stream.Collectors;
+
+    public class MapExample{
+        public static void main(String[] args){
+            List<String> names = Arrays.asList("Suraj", "Sunny", "Swapnil");
+
+            // Using map to transform names to uppercase
+            List<String> uppercaseNames = names.stream()
+                    .map(name -> name.toUpperCase())
+                    .collect(Collectors.toList());
+
+            System.out.println(uppercaseNames);
+        }
+    }
+
+    In this example, we start with a list of names and use the `map()` operation to transform 
+    each name to uppercase. The result is a new list (`uppercaseNames`) containing the uppercase 
+    versions of the original names.
+
+    The `map()` operation is a powerful tool for transforming data within a stream, allowing you 
+    to perform operations on individual elements and create a new stream with the modified values.

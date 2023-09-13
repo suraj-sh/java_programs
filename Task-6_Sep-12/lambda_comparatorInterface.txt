@@ -1,0 +1,33 @@
+2.4 Show how to use lambda expressions with the Comparator interface for sorting.
+
+->  Lambda expression with the `Comparator` interface to sort a list of integers in descending order:
+
+
+    import java.util.ArrayList;
+    import java.util.Collections;
+    import java.util.Comparator;
+    import java.util.List;
+
+    public class LambdaComparatorIntegerExample {
+        public static void main(String[] args) {
+            // Create a list of integers
+            List<Integer> numbers = new ArrayList<>();
+            numbers.add(5);
+            numbers.add(2);
+            numbers.add(8);
+            numbers.add(1);
+
+            // Sort the list in descending order using a lambda expression and Comparator
+            Collections.sort(numbers, (num1, num2) -> num2 - num1);
+
+            // Print the sorted list
+            for (Integer number : numbers) {
+                System.out.println(number);
+            }
+        }
+    }
+
+    In this example, we have a list of integers (`numbers`), and we want to sort them in descending order 
+    using a lambda expression with the `Comparator` interface. 
+    The lambda expression `(num1, num2) -> num2 - num1` specifies that the list should be sorted 
+    in descending order by subtracting `num1` from `num2`.

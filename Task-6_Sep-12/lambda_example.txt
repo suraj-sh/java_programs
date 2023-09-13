@@ -1,0 +1,14 @@
+2.2 Provide an example of a simple lambda expression.
+
+->  Here's a simple example of a lambda expression in Java that represents a functional interface `Runnable`:
+
+    Runnable myLambda = () -> {
+        // Code to be executed
+        System.out.println("Hello, Lambda!");
+    };
+
+    In this example, `() -> { /* Code */ }` is a lambda expression that represents a `Runnable`. 
+    When `myLambda.run()` is called, it executes the code inside the lambda expression.
+
+    Lambda expressions have significantly improved code readability and made it easier to work with 
+    functional programming concepts in Java.

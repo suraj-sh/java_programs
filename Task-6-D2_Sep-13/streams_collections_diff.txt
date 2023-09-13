@@ -1,0 +1,20 @@
+6.2 Explain the difference between collections and streams.
+
+->  Collections and streams are both ways to work with data in Java, but they have key differences:
+
+    Collections:
+    - Collections store data in memory as a fixed set of elements.
+    - You can add, remove, and modify elements in collections.
+    - You typically iterate over collections using loops (e.g., for-each loop).
+    - Collections are eager; they compute all operations immediately when executed.
+    - They are good for storing, modifying, and accessing data.
+
+    Streams:
+    - Streams are not a data structure; they represent a sequence of data.
+    - You can perform operations like filtering, mapping, and reducing on data in a declarative, functional way.
+    - Streams are lazy; they only process data when needed, improving efficiency.
+    - They are suitable for transforming, filtering, and processing data, especially with large datasets.
+    - Streams do not store data themselves; they work with existing collections or data sources.
+
+    In summary, collections are containers for data, while streams are a way to process and transform data. 
+    Streams offer a functional and efficient approach to data manipulation, especially for large datasets.

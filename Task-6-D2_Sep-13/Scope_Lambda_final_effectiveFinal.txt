@@ -1,0 +1,40 @@
+4.1 Describe the variable scope in a lambda expression.
+    What is the significance of the final and "effectively final" variables in lambda expressions?
+
+->  In a lambda expression in Java:
+
+    1. Variable Scope: Lambda expressions can access variables from their surrounding scope, 
+       including local variables, instance variables (fields), and static variables (class-level variables).
+
+    2. Final and "Effectively Final" Variables: In lambda expressions, local variables from the 
+       enclosing scope must be either explicitly declared as `final` or effectively treated as final. 
+       An "effectively final" variable is one that is not reassigned after its initial assignment. 
+       This requirement ensures that the value of the variable remains constant within the lambda expression.
+
+    Significance:
+    - `final` or effectively final variables ensure that the variables are not modified within the lambda expression, 
+       providing safety and predictability.
+    - It allows lambda expressions to capture and use variables from the surrounding context, making them useful 
+      for encapsulating behavior that depends on external data.
+    - This design helps prevent subtle bugs caused by changes to variables used within lambda expressions.
+
+    Example:
+
+    public class LambdaScopeExample{
+        public static void main(String[] args){
+            int x = 10; // Effectively final
+
+            // Lambda expression accessing an effectively final variable
+            Runnable runnable = () -> {
+                System.out.println("Value of x: " + x);
+                // x = 20; // Uncommenting this line would result in a compilation error
+            };
+
+            runnable.run();
+        }
+    }
+
+    In this example, `x` is effectively final, and it can be accessed within the lambda expression. 
+    However, if you uncomment the line that tries to reassign `x`, it will result in a compilation error 
+    because `x` is no longer effectively final. This restriction helps ensure the stability of variables 
+    used in lambda expressions.

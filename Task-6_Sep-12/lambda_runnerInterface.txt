@@ -1,0 +1,34 @@
+2.3 How can you use lambda expressions with the Runnable interface?
+
+->  You can use lambda expressions with the `Runnable` interface to define and run tasks in a more concise way. 
+    The `Runnable` interface is a functional interface in Java, meaning it has a single abstract method (`run()`) 
+    that you can represent using a lambda expression.
+
+    Lambda expression with the `Runnable` interface:
+
+    public class LambdaRunnableExample {
+        public static void main(String[] args) {
+            // Using a lambda expression to create a Runnable
+            Runnable myLambda = () -> {
+                System.out.println("Hello from Lambda!");
+            };
+
+            // Create a Thread and pass the Runnable to its constructor
+            Thread thread = new Thread(myLambda);
+
+            // Start the thread
+            thread.start();
+        }
+    }
+
+    In this example:
+
+    1.  We create a lambda expression `() -> { /* Code */ }`, which represents a `Runnable` since `Runnable` 
+        has a single abstract method `run()`.
+
+    2.  We create a `Thread` and pass the lambda expression `myLambda` to its constructor.
+
+    3.  We start the thread using `thread.start()`, which will execute the code within the lambda expression.
+
+    Using lambda expressions with the `Runnable` interface allows you to define and execute tasks concisely, 
+    which is especially useful in multithreaded applications where you want to perform tasks concurrently.

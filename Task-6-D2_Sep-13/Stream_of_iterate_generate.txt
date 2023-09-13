@@ -1,0 +1,51 @@
+8.1 How can you generate a stream using of(), iterate(), and generate()?
+
+->  Generating streams in Java using `of()`, `iterate()`, and `generate()` as follows:
+
+    1. Using `of()`:
+    - `Stream.of()` creates a stream from a sequence of provided elements.
+    
+    Example:
+
+    import java.util.stream.Stream;
+
+    public class StreamGenerationExample {
+        public static void main(String[] args) {
+            Stream<Integer> numbers = Stream.of(1, 2, 3, 4, 5);
+            numbers.forEach(System.out::println);
+        }
+    }
+
+
+    2. Using `iterate()`:
+    - `Stream.iterate()` generates an infinite stream by applying a function to each element.
+    
+    Example (Generate even numbers):
+
+    import java.util.stream.Stream;
+
+    public class StreamGenerationExample {
+        public static void main(String[] args) {
+            Stream<Integer> evenNumbers = Stream.iterate(0, n -> n + 2);
+            evenNumbers.limit(5).forEach(System.out::println);
+        }
+    }
+
+
+    3. Using `generate()`:
+    - `Stream.generate()` creates an infinite stream by providing a supplier function.
+    
+    Example (Generate random numbers):
+
+    import java.util.Random;
+    import java.util.stream.Stream;
+
+    public class StreamGenerationExample {
+        public static void main(String[] args) {
+            Stream<Integer> randomNumbers = Stream.generate(() -> new Random().nextInt(100));
+            randomNumbers.limit(5).forEach(System.out::println);
+        }
+    }
+
+    These methods allow you to create streams from provided values, generate sequences, 
+    or create infinite streams, depending on your needs.

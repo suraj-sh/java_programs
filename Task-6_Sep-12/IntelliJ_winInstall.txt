@@ -1,0 +1,19 @@
+1.2 Explain the process of installing IntelliJ IDEA on a Windows system.
+
+->  Installing IntelliJ IDEA on a Windows system:
+    1.  Download IntelliJ IDEA:
+        - Visit JetBrains' website and download IntelliJ IDEA (Community or Ultimate edition).
+
+    2.  Run the Installer:
+        - Locate the downloaded installer and run it.
+
+    3.  Follow Installation Steps:
+        - Choose the installation location, components, and UI theme.
+        - Optionally, create a desktop shortcut and choose data-sharing preferences.
+
+    4.  Complete Installation:
+        - Click "Next" or "Install" to begin installation.
+        - Launch IntelliJ IDEA when prompted.
+
+    5.  Start Coding:
+        - You're ready to use IntelliJ IDEA for Java development.

@@ -1,0 +1,15 @@
+1.3 What are the steps to install the JDK on a Mac?
+
+->  Installing the Java Development Kit (JDK) on a Mac:
+    1.  Check for Existing Java:
+        - Open Terminal and type `java -version` to see if Java is already installed.
+
+    2.  Download JDK:
+        - If needed, download the JDK from a trusted source like Oracle or OpenJDK.
+
+    3.  Install JDK:
+        - Open the downloaded .dmg file and run the installer.
+        - Follow the installation prompts, and enter your password if asked.
+
+    4.  Verify Installation:
+        - In Terminal, type `java -version` again to ensure the JDK is installed.

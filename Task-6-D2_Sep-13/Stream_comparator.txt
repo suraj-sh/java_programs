@@ -1,0 +1,37 @@
+7.4 How can you implement a customized sort using a comparator with streams?
+
+->  Implementing a customized sort using a comparator with streams by using the `sorted()` 
+    operation along with a custom comparator. 
+    
+    Here's an example:
+
+    import java.util.Arrays;
+    import java.util.Comparator;
+    import java.util.List;
+
+    public class CustomSortWithStream{
+        public static void main(String[] args){
+            List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve");
+
+            // Custom comparator for sorting by name length
+            Comparator<String> lengthComparator = (str1, str2) -> Integer.compare(str1.length(), str2.length());
+
+            // Sort the names based on name length
+            List<String> sortedNames = names.stream()
+                    .sorted(lengthComparator)
+                    .toList(); // In Java 16+, you can use .toList() to collect to a List
+
+            sortedNames.forEach(System.out::println);
+        }
+    }
+
+    In this example:
+
+    - We start with a list of strings (`names`).
+    - We define a custom comparator (`lengthComparator`) that compares strings based on their length.
+    - We use the `sorted()` operation to sort the names using the custom comparator, 
+      resulting in a list of names sorted by their length.
+    - Finally, we print the sorted names.
+
+    This demonstrates how you can easily implement a customized sort using a comparator with streams 
+    to achieve specific sorting criteria.

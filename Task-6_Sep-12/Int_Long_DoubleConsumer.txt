@@ -1,0 +1,61 @@
+3.3 Show how to use specialized versions like IntConsumer, LongConsumer, and DoubleConsumer.
+
+->  Specialized versions of the `Consumer` functional interface such as `IntConsumer`, 
+    `LongConsumer`, and `DoubleConsumer` are designed to work with specific primitive data types 
+    (`int`, `long`, and `double`) for improved performance and reduced memory overhead. 
+    Here's how to use these specialized interfaces:
+
+    1.  IntConsumer: IntConsumer accepts an `int` as input and performs an action. 
+        Here's an example of using IntConsumer to square each element in an `int` array:
+    
+        import java.util.Arrays;
+        import java.util.function.IntConsumer;
+
+        public class IntConsumerExample {
+            public static void main(String[] args) {
+                int[] numbers = {1, 2, 3, 4, 5};
+
+                // Using IntConsumer to square each element
+                IntConsumer square = (num) -> System.out.println(num * num);
+
+                Arrays.stream(numbers).forEach(square);
+            }
+        }
+
+    2.  LongConsumer: LongConsumer accepts a `long` as input and performs an action. 
+        Here's an example of using LongConsumer to print elements in a `long` array:
+
+        import java.util.Arrays;
+        import java.util.function.LongConsumer;
+
+        public class LongConsumerExample {
+            public static void main(String[] args) {
+                long[] numbers = {1000000001L, 2000000002L, 3000000003L};
+
+                // Using LongConsumer to print each element
+                LongConsumer printNumber = (num) -> System.out.println(num);
+
+                Arrays.stream(numbers).forEach(printNumber);
+            }
+        }
+
+    3.  DoubleConsumer: DoubleConsumer accepts a `double` as input and performs an action. 
+        Here's an example of using DoubleConsumer to calculate the square root of elements in a `double` array:
+
+        import java.util.Arrays;
+        import java.util.function.DoubleConsumer;
+
+        public class DoubleConsumerExample {
+            public static void main(String[] args) {
+                double[] numbers = {4.0, 9.0, 16.0, 25.0};
+
+                // Using DoubleConsumer to calculate square roots
+                DoubleConsumer calculateSquareRoot = (num) -> System.out.println(Math.sqrt(num));
+
+                Arrays.stream(numbers).forEach(calculateSquareRoot);
+            }
+        }
+
+    In each example, we create a specialized consumer (`IntConsumer`, `LongConsumer`, or `DoubleConsumer`) 
+    and use it to perform actions on arrays containing primitive data types. 
+    These specialized interfaces offer better performance for primitive types compared to the generic `Consumer`.

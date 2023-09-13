@@ -1,0 +1,43 @@
+3.5 Provide examples demonstrating the usage of the Predicate functional interface.
+
+->  A Predicate in Java is a functional interface that represents a boolean-valued function. 
+    It's a simple and powerful concept used for testing conditions and making decisions in code.
+
+    Usage of the `Predicate` functional interface:
+
+    Example 1: Checking if a Number is Even:
+    import java.util.function.Predicate;
+
+    public class PredicateExample{
+        public static void main(String[] args){
+            Predicate<Integer> isEven = num -> num % 2 == 0;
+
+            System.out.println(isEven.test(4)); // Output: true
+            System.out.println(isEven.test(7)); // Output: false
+        }
+    }
+
+    In this example, the `Predicate` named `isEven` checks whether an integer 
+    is even by using the `%` operator.
+
+
+    Example 2: Filtering a List of Strings:
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.function.Predicate;
+
+    public class PredicateExample{
+        public static void main(String[] args){
+            List<String> fruits = Arrays.asList("Apple", "Banana", "Cherry", "Date");
+
+            Predicate<String> startsWithA = str -> str.startsWith("A");
+
+            fruits.stream().filter(startsWithA).forEach(System.out::println);
+        }
+    }
+
+    In this example, the `Predicate` named `startsWithA` is used to filter and print fruits 
+    that start with the letter 'A' from a list of strings.
+
+    These examples show how `Predicate` can be used to define conditions for filtering or 
+    checking values, making your code concise and readable.

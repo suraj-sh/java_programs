@@ -1,0 +1,41 @@
+7.2 Explain the flatMap() operation and provide an example.
+
+->  The `flatMap()` operation in a stream is used to flatten a stream of multiple elements 
+    or collections into a single stream of elements. It's particularly useful when you have 
+    nested collections within your stream and want to work with the individual elements of 
+    those nested collections.
+
+    Purpose of `flatMap()` operation:
+    - To flatten nested collections within a stream into a single stream of elements.
+    - It allows you to work with the individual elements of nested collections as if they 
+      were part of the main stream.
+
+    Example:
+
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.stream.Collectors;
+
+    public class FlatMapExample{
+        public static void main(String[] args){
+            List<List<Integer>> nestedList = Arrays.asList(
+                Arrays.asList(1, 2, 3),
+                Arrays.asList(4, 5),
+                Arrays.asList(6, 7, 8)
+            );
+
+            // Using flatMap to flatten the nested list into a single stream
+            List<Integer> flattenedList = nestedList.stream()
+                    .flatMap(subList -> subList.stream())
+                    .collect(Collectors.toList());
+
+            System.out.println(flattenedList);
+        }
+    }
+
+    In this example, we start with a list of lists (`nestedList`) containing integers. 
+    We use the `flatMap()` operation to flatten the nested lists into a single stream of integers. 
+    The result is a new list (`flattenedList`) containing all the individual integers from the nested lists.
+
+    The `flatMap()` operation is particularly handy when you have nested structures in your data 
+    and want to simplify the stream processing by working with the elements at a lower level of nesting.

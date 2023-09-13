@@ -1,0 +1,54 @@
+3.6 Demonstrate the use of specialized IntPredicate, LongPredicate, and DoublePredicate.
+
+->  The specialized versions of the `Predicate` functional interface for primitive data 
+    types in Java are `IntPredicate`, `LongPredicate`, and `DoublePredicate`. 
+    These interfaces are used for testing conditions on primitive data types 
+    (`int`, `long`, and `double`) more efficiently than the generic `Predicate`. 
+    
+    Here's how to use them:
+
+    1. IntPredicate:
+    import java.util.function.IntPredicate;
+
+    public class IntPredicateExample{
+        public static void main(String[] args){
+            IntPredicate isEven = num -> num % 2 == 0;
+
+            System.out.println(isEven.test(4)); // Output: true
+            System.out.println(isEven.test(7)); // Output: false
+        }
+    }
+
+    In this example, `IntPredicate` checks whether an integer is even.
+
+    2. LongPredicate:
+    import java.util.function.LongPredicate;
+
+    public class LongPredicateExample{
+        public static void main(String[] args){
+            LongPredicate isPositive = num -> num > 0;
+
+            System.out.println(isPositive.test(5L));   // Output: true
+            System.out.println(isPositive.test(-3L));  // Output: false
+        }
+    }
+
+    Here, `LongPredicate` checks if a long value is positive.
+
+    3. DoublePredicate:
+    import java.util.function.DoublePredicate;
+
+    public class DoublePredicateExample{
+        public static void main(String[] args){
+            DoublePredicate isGreaterThanZero = num -> num > 0.0;
+
+            System.out.println(isGreaterThanZero.test(3.14));   // Output: true
+            System.out.println(isGreaterThanZero.test(-1.0));  // Output: false
+        }
+    }
+
+    `DoublePredicate` checks if a double value is greater than zero.
+
+    These specialized predicates allow you to work with primitive data types more 
+    efficiently and can be used for various tasks like filtering, validation, 
+    or any boolean-based conditions involving these data types.

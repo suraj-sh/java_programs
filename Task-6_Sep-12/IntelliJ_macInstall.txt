@@ -1,0 +1,21 @@
+1.4 Walk through the installation of IntelliJ IDEA on a Mac.
+
+->  Installing IntelliJ IDEA on a Mac:
+    1.  Download IntelliJ IDEA:
+        - Visit JetBrains' website and download IntelliJ IDEA (Community or Ultimate edition) for macOS.
+
+    2.  Open the Disk Image:
+        - Locate the downloaded .dmg file and double-click it to open the disk image.
+
+    3.  Install IntelliJ IDEA:
+        - Drag the IntelliJ IDEA icon into the "Applications" folder in the opened window.
+
+    4.  Launch IntelliJ IDEA:
+        - Go to your Applications folder and double-click the IntelliJ IDEA icon to launch the application.
+
+    5.  Set Up IntelliJ IDEA:
+        - When you first launch IntelliJ IDEA, you'll be asked to import settings or configure your IDE. 
+        Choose the default settings if you're not sure.
+
+    6.  Start Coding:
+        - You're now ready to use IntelliJ IDEA for Java development on your Mac.

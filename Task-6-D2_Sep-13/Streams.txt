@@ -1,0 +1,24 @@
+6.1 Introduce the concept of streams in Java.
+
+->  In Java, streams are a powerful and concise way to process sequences of data, 
+    such as collections (e.g., lists, sets) or arrays. Streams allow you to perform operations like 
+    filtering, mapping, and reducing on data elements in a functional and declarative manner.
+
+    Example of using a stream to filter and print even numbers:
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class StreamExample{
+        public static void main(String[] args){
+            List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+            numbers.stream()
+                .filter(num -> num % 2 == 0)
+                .forEach(System.out::println);
+        }
+    }
+
+    In this example, a stream is created from a list of numbers, then filtered to keep only the even numbers, 
+    and finally, the `forEach` operation is used to print them. 
+    Streams simplify data manipulation and make code more expressive.

@@ -1,0 +1,11 @@
+1.6 How can you link your code to a Git repository?
+
+->  To link your code to a Git repository in IntelliJ IDEA:
+    1. Open your project in IntelliJ IDEA.
+    2. Go to "File" > "Settings" (or "IntelliJ IDEA" > "Preferences" on macOS).
+    3. Under "Version Control," select "Git."
+    4. Click the "+" icon to add a Git repository.
+    5. Enter the repository URL and authentication credentials (if required).
+    6. Click "Test" to ensure the connection is successful.
+    7. Click "OK" to confirm and link your code to the Git repository.
+    8. You can now use Git features like commit, pull, and push within IntelliJ IDEA.

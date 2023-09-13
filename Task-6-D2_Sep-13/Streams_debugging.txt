@@ -1,0 +1,28 @@
+6.4 How can streams be used for debugging purposes?
+
+->  Streams can be used for debugging purposes in Java by inserting intermediate operations 
+    that allow you to inspect the data at different points in the stream processing pipeline. 
+    One common debugging technique is to use the `peek` method to log or print intermediate 
+    results without modifying the stream. 
+    
+    Here's a short and simple example:
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class StreamDebuggingExample{
+        public static void main(String[] args){
+            List<String> words = Arrays.asList("apple", "banana", "cherry", "date");
+
+            words.stream()
+                .filter(word -> word.startsWith("c"))
+                .peek(System.out::println) // Debugging: Print intermediate result
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
+        }
+    }
+
+    In this example, we use the `peek` method to print the intermediate result 
+    (words that start with 'c') to the console. 
+    This helps you understand how the data is being transformed at each stage of the stream processing. 
+    It's a handy way to troubleshoot and debug stream operations without modifying the original data.

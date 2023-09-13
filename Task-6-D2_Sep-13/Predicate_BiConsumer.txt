@@ -1,0 +1,51 @@
+3.7 How can you combine Predicate and BiConsumer in a single lambda expression?
+
+->  To combine a `Predicate` and a `BiConsumer` in a single lambda expression, 
+    you can use a Java feature called method references. A method reference is a 
+    shorthand notation for a lambda expression that calls a specific method. 
+    In this case, you can use a method reference to call the `accept` method of 
+    the `BiConsumer` when the `Predicate` condition is satisfied. 
+    
+    Here's how you can do it:
+
+    import java.util.function.BiConsumer;
+    import java.util.function.Predicate;
+
+    public class PredicateBiConsumerExample{
+        public static void main(String[] args){
+            // Define a Predicate for filtering even numbers
+            Predicate<Integer> isEven = num -> num % 2 == 0;
+
+            // Define a BiConsumer to print numbers
+            BiConsumer<Integer, String> printNumber = (num, message) -> {
+                System.out.println(message + num);
+            };
+
+            // Combine Predicate and BiConsumer using method reference
+            Predicate<Integer> filterAndPrintEven = isEven.and(num -> num > 0)
+                    .and(num -> num < 10)
+                    .and(num -> num != 5)
+                    .and(num -> num != 7)
+                    .and(num -> num != 9);
+
+            // Use the combined Predicate and BiConsumer to filter and print even numbers
+            for(int i = 1; i <= 10; i++){
+                if(filterAndPrintEven.test(i)){
+                    printNumber.accept(i, "Even number: ");
+                }
+            }
+        }
+    }
+
+    In this example:
+
+    1. We define a `Predicate` named `isEven` to filter even numbers.
+    2. We define a `BiConsumer` named `printNumber` to print numbers along with a message.
+    3. We combine the `Predicate` and `BiConsumer` using the `and` method of the `Predicate` 
+       interface to create a combined condition.
+    4. We use the combined `Predicate` and `BiConsumer` to filter and print even numbers 
+       that meet additional conditions.
+
+    The key to combining them is to use the `and` method to chain multiple `Predicate` conditions together, 
+    and then, inside the `test` method, use a method reference to call the `accept` method of the `BiConsumer`. 
+    This allows you to perform the desired action when the conditions are met.

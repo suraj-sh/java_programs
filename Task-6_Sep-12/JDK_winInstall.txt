@@ -1,0 +1,27 @@
+1.1 How do you install the Java Development Kit (JDK) on a Windows system?
+
+->  Installing the Java Development Kit (JDK) on a Windows system:
+    1.  Download JDK:
+        - Go to the Oracle or another trusted JDK distributor's website.
+        - Download the JDK installer for your Windows version (32-bit or 64-bit).
+
+    2.  Run Installer:
+        - Double-click the downloaded installer file.
+
+    3.  Follow Installation Wizard:
+        - Follow the prompts in the installation wizard.
+        - Choose the default installation location or specify a custom one if needed.
+
+    4.  Select Installation Options:
+        - Make sure to select "Development Tools" or a similar option that includes the JDK and JRE.
+
+    5.  Complete Installation:
+        - Proceed through the installation, accepting any terms or agreements.
+
+    6.  Set Environment Variables:
+        - Open "System Properties" > "Advanced" > "Environment Variables."
+        - Create a new system variable named `JAVA_HOME` with the JDK installation path.
+        - Edit the "Path" variable and append `;%JAVA_HOME%\bin` to the end.
+
+    7.  Verify Installation:
+        - Open Command Prompt or PowerShell and run `java -version` to confirm the JDK is installed.

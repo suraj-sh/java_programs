@@ -1,0 +1,21 @@
+3.4 How would you use the BiConsumer functional interface?
+
+->  A `BiConsumer` in Java is a functional interface that accepts two inputs and 
+    performs an action without returning any result.
+
+    import java.util.function.BiConsumer;
+
+    public class BiConsumerExample {
+        public static void main(String[] args) {
+            // Define a BiConsumer to print pairs of integers
+            BiConsumer<Integer, Integer> printSum = (num1, num2) -> System.out.println(num1 + num2);
+
+            // Use the BiConsumer to print the sum of two numbers
+            printSum.accept(5, 7); // Output: 12
+            printSum.accept(10, 20); // Output: 30
+        }
+    }
+
+    In this example, we create a `BiConsumer` called `printSum`, which takes two integers and prints their sum. 
+    When we call `printSum.accept(5, 7)`, it prints `12`, and calling `printSum.accept(10, 20)` prints `30`. 
+    `BiConsumer` is useful for handling dual-input operations concisely.

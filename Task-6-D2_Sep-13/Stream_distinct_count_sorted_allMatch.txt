@@ -1,0 +1,46 @@
+7.3 Demonstrate the usage of various stream operations like distinct(), count(), sorted(), and allMatch().
+
+->  Stream operations in Java, `distinct()`, `count()`, `sorted()`, and `allMatch()`:
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class StreamOperationsExample{
+        public static void main(String[] args){
+            List<Integer> numbers = Arrays.asList(3, 1, 2, 3, 4, 2, 5, 4, 6, 5);
+
+            // Use distinct() to get unique elements
+            System.out.println("Unique elements: ");
+            numbers.stream()
+                .distinct()
+                .forEach(System.out::println);
+
+            // Use count() to count the number of elements
+            long count = numbers.stream()
+                            .count();
+            System.out.println("Count of elements: " + count);
+
+            // Use sorted() to sort elements in ascending order
+            System.out.println("Sorted elements (ascending): ");
+            numbers.stream()
+                .distinct()
+                .sorted()
+                .forEach(System.out::println);
+
+            // Use allMatch() to check if all elements meet a condition
+            boolean allGreaterThanZero = numbers.stream()
+                                                .allMatch(num -> num > 0);
+            System.out.println("All numbers are greater than zero: " + allGreaterThanZero);
+        }
+    }
+
+    In this example:
+
+    - We start with a list of integers (`numbers`).
+    - We use `distinct()` to get unique elements from the list.
+    - We use `count()` to count the number of elements in the stream.
+    - We use `sorted()` to sort the elements in ascending order.
+    - We use `allMatch()` to check if all elements in the stream satisfy a given condition.
+
+    The operations demonstrate how to perform distinct filtering, counting, sorting, and 
+    checking conditions on elements within a stream.

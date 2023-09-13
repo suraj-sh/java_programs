@@ -1,0 +1,62 @@
+3.9 Explain the concept of method reference (::) with relevant code examples.
+
+->  Method reference (`::`) in Java is a shorthand notation for referencing methods or constructors 
+    in various contexts, such as when passing methods as arguments to functions, 
+    defining lambda expressions, or creating functional interfaces. 
+    It simplifies code and makes it more concise. 
+    
+    Here are the key points:
+    - Method reference allows you to refer to a method or constructor by its name.
+    - It is often used when a lambda expression simply calls an existing method.
+    - It improves code readability and reduces boilerplate code.
+
+    Method Reference Types:
+
+    1. Static Method Reference: Reference to a static method using ClassName::methodName.
+
+    import java.util.Arrays;
+    import java.util.List;
+
+    public class MethodReferenceExample{
+        public static void main(String[] args){
+            List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+            names.forEach(System.out::println); // Static method reference
+        }
+    }
+    In this example, System.out::println refers to the static println method of System.out. 
+    This is a static method reference.
+
+
+    2. Instance Method Reference: Reference to an instance method of an object using instance::methodName.
+
+    import java.util.function.Consumer;
+
+    public class MethodReferenceExample{
+        public static void main(String[] args){
+            // Using an instance method reference
+            Consumer<String> printUpperCaseReference = System.out::println;
+            
+            printUpperCaseReference.accept("world"); // Instance method reference
+        }
+    }
+    Here, System.out::println refers to the instance method println of the System.out object. 
+    This is an instance method reference.
+
+    3. Constructor Reference: Reference to a constructor using ClassName::new.
+  
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.function.Supplier;
+
+    public class MethodReferenceExample{
+        public static void main(String[] args){
+            // Using a constructor reference
+            Supplier<List<String>> listSupplier = ArrayList::new;
+            List<String> names = listSupplier.get(); // Constructor reference
+        }
+    }
+    In this case, ArrayList::new refers to the constructor of the ArrayList class. 
+    This is a constructor reference.
+
+    These examples demonstrate the use of method references in Java, showcasing the 
+    three main types: static method reference, instance method reference, and constructor reference.
