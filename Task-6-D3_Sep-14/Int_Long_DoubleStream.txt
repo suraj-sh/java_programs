@@ -1,0 +1,29 @@
+9.2 Explain IntStream, LongStream, and DoubleStream.
+
+->  `IntStream`, `LongStream`, and `DoubleStream` are specialized stream interfaces in 
+    Java designed to work with primitive numeric data types (`int`, `long`, and `double`) more efficiently.
+
+    1. `IntStream`:
+        - `IntStream` is a stream interface for working with primitive `int` values.
+        - It provides operations and methods optimized for numeric calculations and 
+          manipulations involving `int` data.
+        - Useful for tasks like summing integers, finding maximum/minimum values, 
+          and performing numeric transformations efficiently.
+
+    2. `LongStream`:
+        - `LongStream` is a stream interface for working with primitive `long` values.
+        - It is designed for tasks that involve `long` data types, such as handling timestamps, 
+          large counts, or unique identifiers.
+        - Provides specialized operations for tasks like calculating averages, 
+          finding the sum of long values, or working with large numbers.
+
+    3. `DoubleStream`:
+        - `DoubleStream` is a stream interface for working with primitive `double` values.
+        - It's used for handling floating-point numbers and is essential for tasks requiring precision, 
+          such as scientific or financial calculations.
+        - Provides operations like calculating the average of doubles, finding the sum, 
+          or performing mathematical operations efficiently.
+
+    These specialized numeric streams are more memory-efficient and performant than regular 
+    streams (streams of objects) when working with their respective primitive data types, 
+    making them valuable tools for numeric and mathematical operations in Java.

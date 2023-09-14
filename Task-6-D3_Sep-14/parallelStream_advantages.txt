@@ -1,0 +1,21 @@
+11.3  Explain scenarios where parallel streams are advantageous.
+
+->  Parallel streams are advantageous in scenarios where:
+
+    1. Large Data: When you have a significant amount of data to process, parallel streams can distribute 
+       the workload across multiple processor cores, making it faster.
+
+    2. CPU-Intensive Tasks: For tasks that require substantial computation, such as mathematical calculations 
+       or data transformations, parallel streams can utilize the available CPU cores efficiently.
+
+    3. Independent Subtasks: If your task can be broken down into independent subtasks that don't depend 
+       on each other's results, parallel streams can process these subtasks concurrently, saving time.
+
+    4. Aggregate Operations: Operations like summing, averaging, finding maximum/minimum values, or calculating 
+       statistics can benefit from parallel streams, especially when applied to large datasets.
+
+    5. Data Pipelines: In data processing pipelines, where you apply multiple data transformations and 
+       filtering steps in sequence, parallel streams can optimize each step's execution.
+
+    In these scenarios, parallel streams can help you harness the power of multi-core processors and 
+    improve the performance of your data processing tasks.

@@ -1,0 +1,27 @@
+11.2  Compare the performance of sequential and parallel streams.
+
+->  Sequential streams process elements one by one in a single thread, while parallel streams 
+    leverage multiple threads and processor cores to process elements concurrently. 
+    The performance of sequential vs. parallel streams depends on the specific task and hardware. 
+
+    Sequential Streams:
+    - Process elements one at a time in a single thread.
+    - Suitable for small datasets or tasks where parallelism doesn't provide a significant advantage.
+    - May be simpler to reason about and safer for tasks with shared data.
+
+    Parallel Streams:
+    - Process elements concurrently across multiple threads and processor cores.
+    - Suitable for large datasets and tasks that can be divided into independent subtasks.
+    - Can provide performance improvements on multi-core processors.
+
+    Performance Considerations:
+    - Sequential streams are generally simpler to use and may be more predictable.
+    - Parallel streams can provide significant speedup for computationally intensive 
+      tasks on multi-core systems.
+    - Parallelism introduces overhead due to thread management, so it may not always be faster 
+      and can sometimes introduce thread-safety concerns.
+    - It's essential to analyze the specific task, dataset size, and hardware to determine whether 
+      using parallel streams is beneficial.
+
+    In practice, the choice between sequential and parallel streams should be based on performance 
+    testing and consideration of the task's characteristics and hardware capabilities.

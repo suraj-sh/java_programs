@@ -1,0 +1,40 @@
+10.3  How can you use the groupingBy() collector with examples?
+
+->  `groupingBy()` collector in Java to group elements from a stream based on 
+    a specific criteria or property. 
+
+    Purpose of `groupingBy()`:
+    - `groupingBy()` is used to categorize elements into groups based on a classification function.
+    - It returns a `Map` where keys represent categories, and values are lists of elements 
+      belonging to each category.
+
+    Example: Grouping by the length of words in a list of strings:
+
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.Map;
+    import java.util.stream.Collectors;
+
+    public class GroupingByExample{
+        public static void main(String[] args){
+            List<String> words = Arrays.asList("apple", "banana", "cherry", "date", "fig");
+
+            // Group words by their length
+            Map<Integer, List<String>> groupedWords = words.stream()
+                    .collect(Collectors.groupingBy(String::length));
+
+            // Print the result
+            groupedWords.forEach((length, wordList) ->
+                System.out.println("Words of length " + length + ": " + wordList));
+        }
+    }
+
+    In this example:
+
+    - We have a list of strings (`words`).
+    - We use `Collectors.groupingBy(String::length)` to group the words by their length.
+    - The resulting `groupedWords` map contains categories (lengths) as keys and lists of words as values.
+    - We print the categories and the words in each category.
+
+    This demonstrates how `groupingBy()` can be used to categorize and group elements based on 
+    a specific property or criteria.

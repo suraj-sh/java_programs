@@ -1,0 +1,54 @@
+10.1  Explain the joining(), counting(), and mapping() collectors.
+
+->  The `joining()`, `counting()`, and `mapping()` collectors in Java:
+
+    1. `joining()`:
+        - `joining()` is a collector used to concatenate elements of a stream into a single string.
+        - It can be used to join elements with a specified delimiter.
+        - Useful for creating comma-separated lists or formatted strings from a stream of data.
+
+    2. `counting()`:
+        - `counting()` is a collector that counts the number of elements in a stream.
+        - It returns a long value representing the count of elements.
+        - Useful for obtaining the size of a stream or counting occurrences.
+
+    3. `mapping()`:
+        - `mapping()` is a collector used to apply a mapping function to elements before collecting them.
+        - It transforms elements into another type before collecting.
+        - Useful when you want to collect a specific property or attribute of elements.
+
+    Example (Using `joining()`, `counting()`, and `mapping()`):
+
+    import java.util.Arrays;
+    import java.util.List;
+    import java.util.stream.Collectors;
+
+    public class CollectorsExample{
+        public static void main(String[] args){
+            List<String> fruits = Arrays.asList("Apple", "Banana", "Cherry", "Date");
+
+            // Joining elements with a delimiter
+            String joinedFruits = fruits.stream()
+                    .collect(Collectors.joining(", "));
+            System.out.println("Joined Fruits: " + joinedFruits);
+
+            // Counting the number of elements
+            long count = fruits.stream()
+                    .collect(Collectors.counting());
+            System.out.println("Number of Fruits: " + count);
+
+            // Mapping elements to their lengths before collecting
+            List<Integer> fruitLengths = fruits.stream()
+                    .collect(Collectors.mapping(String::length, Collectors.toList()));
+            System.out.println("Fruit Lengths: " + fruitLengths);
+        }
+    }
+
+    In this example:
+
+    - We use `joining(", ")` to concatenate elements with a comma and space delimiter.
+    - We use `counting()` to count the number of elements in the stream.
+    - We use `mapping(String::length, Collectors.toList())` to map the elements to their 
+      lengths before collecting them into a list.
+
+    These collectors help you perform various operations when collecting elements from a stream.  

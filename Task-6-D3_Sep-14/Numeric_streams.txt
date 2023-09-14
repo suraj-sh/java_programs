@@ -1,0 +1,40 @@
+9.1 What is a numeric stream, and how does it differ from a regular stream?
+
+->  A numeric stream in Java, represented by the specialized stream interfaces `IntStream`, 
+    `LongStream`, and `DoubleStream`, is designed for handling primitive numeric data types 
+    (int, long, double) more efficiently compared to a regular stream (stream of objects). 
+    
+    Here are the differences:
+
+    Numeric Stream vs. Regular Stream:
+
+    1. Data Type: Numeric streams work with primitive numeric data types (int, long, double), 
+                  while regular streams work with objects.
+
+    2. Efficiency: Numeric streams are generally more memory-efficient and performant for 
+                   numeric operations because they avoid the overhead of boxing and unboxing primitive 
+                   values as seen in regular streams.
+
+    3. Specialized Operations: Numeric streams provide specialized operations like `sum()`, `average()`, 
+                               `min()`, and `max()` for numeric calculations, which are not available 
+                               in regular streams.
+
+    Example (Sum of numbers using a numeric stream):
+
+    import java.util.stream.IntStream;
+
+    public class NumericStreamExample{
+        public static void main(String[] args){
+            int[] numbers = {1, 2, 3, 4, 5};
+
+            // Using an IntStream to calculate the sum of numbers
+            int sum = IntStream.of(numbers)
+                            .sum();
+
+            System.out.println("Sum of numbers: " + sum);
+        }
+    }
+
+    In this example, we use an `IntStream` to efficiently calculate the sum of integer values from an array. 
+    Numeric streams are designed to handle numeric data more efficiently and conveniently than regular streams,
+    which work with objects.

@@ -1,0 +1,35 @@
+9.3 Demonstrate how to perform operations like sum(), max(), and min() on numeric streams.
+
+->  Operations like `sum()`, `max()`, and `min()` on numeric streams using `IntStream`. 
+    The same principles apply to `LongStream` and `DoubleStream` for their respective data types:
+
+    import java.util.stream.IntStream;
+
+    public class NumericStreamOperations{
+        public static void main(String[] args){
+            int[] numbers = {10, 5, 8, 15, 3};
+
+            // Calculate the sum of numbers using sum()
+            int sum = IntStream.of(numbers).sum();
+            System.out.println("Sum of numbers: " + sum);
+
+            // Find the maximum number using max()
+            int max = IntStream.of(numbers).max().getAsInt();
+            System.out.println("Maximum number: " + max);
+
+            // Find the minimum number using min()
+            int min = IntStream.of(numbers).min().getAsInt();
+            System.out.println("Minimum number: " + min);
+        }
+    }
+
+    In this example:
+
+    - We start with an array of integers (`numbers`).
+    - We use `IntStream.of(numbers)` to create an `IntStream` from the array.
+    - To calculate the sum, we use the `sum()` operation.
+    - To find the maximum value, we use the `max()` operation.
+    - To find the minimum value, we use the `min()` operation.
+
+    These operations allow you to efficiently perform numeric calculations on a stream of integers. 
+    Similar operations are available for `LongStream` and `DoubleStream` for their respective data types.
