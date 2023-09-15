@@ -1,0 +1,56 @@
+14.7  Show how to convert instances of java.util.Date and java.sql.Date to LocalDateTime or LocalDate.
+
+->  To convert instances of `java.util.Date` and `java.sql.Date` to `LocalDateTime` or `LocalDate`, 
+    you can use the `toInstant()` method to get an `Instant`, and then use that `Instant` to create 
+    the desired `LocalDateTime` or `LocalDate` object. 
+
+    1. Convert `java.util.Date` to `LocalDateTime` and `LocalDate`:
+
+        import java.time.Instant;
+        import java.time.LocalDateTime;
+        import java.time.LocalDate;
+        import java.util.Date;
+
+        public class DateConversionExample {
+            public static void main(String[] args) {
+                // Convert java.util.Date to LocalDateTime
+                Date utilDate = new Date();
+                Instant instant = utilDate.toInstant();
+                LocalDateTime localDateTime = instant.atZone(ZoneId.systemDefault()).toLocalDateTime();
+
+                System.out.println("Converted LocalDateTime: " + localDateTime);
+
+                // Convert java.util.Date to LocalDate
+                LocalDate localDate = instant.atZone(ZoneId.systemDefault()).toLocalDate();
+
+                System.out.println("Converted LocalDate: " + localDate);
+            }
+        }
+        
+
+    2. Convert `java.sql.Date` to `LocalDate`:
+
+        import java.time.LocalDate;
+        import java.sql.Date;
+
+        public class SqlDateConversionExample {
+            public static void main(String[] args) {
+                // Convert java.sql.Date to LocalDate
+                Date sqlDate = Date.valueOf("2023-09-15");
+                LocalDate localDate = sqlDate.toLocalDate();
+
+                System.out.println("Converted LocalDate: " + localDate);
+            }
+        }
+        
+
+    In these examples:
+
+    - For `java.util.Date`, we first convert it to an `Instant` using `toInstant()`, 
+      and then we create `LocalDateTime` or `LocalDate` objects based on the time zone 
+      (`ZoneId.systemDefault()` represents the default time zone of the system).
+
+    - For `java.sql.Date`, we can directly convert it to a `LocalDate` using `toLocalDate()`.
+
+    These conversions allow you to work with modern date and time classes (`LocalDateTime` and `LocalDate`) 
+    when you have older `java.util.Date` or `java.sql.Date` objects.

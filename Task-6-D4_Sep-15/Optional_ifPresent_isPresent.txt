@@ -1,0 +1,67 @@
+12.4  Describe how the ifPresent() and isPresent() methods are used with Optional.
+
+->  The `ifPresent()` and `isPresent()` methods in Java are used with the `Optional` 
+    class to work with optional values in a concise and expressive way. 
+
+    1. `ifPresent(Consumer<? super T> consumer)`:
+        - The `ifPresent()` method takes a `Consumer` as its argument.
+        - If the `Optional` contains a non-null value, it invokes the `Consumer` with that value.
+        - If the `Optional` is empty (contains no value), it does nothing.
+        - This method is useful when you want to perform an action on the value if it's present.
+
+        Example:
+
+        import java.util.Optional;
+
+        public class OptionalExamples {
+            public static void main(String[] args) {
+                Optional<String> optionalName = Optional.of("Alice");
+
+                optionalName.ifPresent(name -> {
+                    System.out.println("Name is present: " + name);
+                    // Perform actions with the value, if present
+                });
+
+                Optional<String> emptyOptional = Optional.empty();
+
+                emptyOptional.ifPresent(name -> {
+                    // This code block will not be executed because the Optional is empty
+                    System.out.println("This won't be printed.");
+                });
+            }
+        }
+
+
+    2. `isPresent()`:
+        - The `isPresent()` method returns a boolean indicating whether the `Optional` 
+          contains a non-null value or is empty.
+        - It's a simple way to check if there's a value to work with before accessing it.
+        - Returns `true` if a value is present, and `false` if the `Optional` is empty.
+
+        Example:
+
+        import java.util.Optional;
+
+        public class OptionalExamples {
+            public static void main(String[] args) {
+                Optional<String> optionalName = Optional.of("Alice");
+
+                if (optionalName.isPresent()) {
+                    System.out.println("Name is present: " + optionalName.get());
+                } else {
+                    System.out.println("Name is absent.");
+                }
+
+                Optional<String> emptyOptional = Optional.empty();
+
+                if (!emptyOptional.isPresent()) {
+                    System.out.println("Empty Optional: No name is present.");
+                }
+            }
+        }
+
+    In summary:
+
+    - `ifPresent()` allows you to perform an action on the value if it exists.
+    - `isPresent()` lets you check if a value is present before accessing it, 
+       helping to prevent null pointer exceptions when working with `Optional`.

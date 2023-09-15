@@ -1,0 +1,45 @@
+12.1  What is the purpose of the Optional class in Java?
+
+->  The `Optional` class in Java serves the purpose of representing an object that 
+    may or may not have a non-null value. It helps in handling scenarios where a value 
+    might be absent or undefined, reducing the risk of null pointer exceptions. 
+
+    Points:
+    - `Optional` is used to work with values that might be missing.
+    - It provides a way to express that a value can be present or absent without using `null`.
+    - Helps prevent null pointer exceptions and encourages safer and more explicit code.
+
+    Example:
+
+    import java.util.Optional;
+
+    public class OptionalExample{
+        public static void main(String[] args){
+            // Create an Optional with a non-null value
+            Optional<String> optionalName = Optional.of("Alice");
+
+            // Check if a value is present and print it
+            if (optionalName.isPresent()) {
+                String name = optionalName.get();
+                System.out.println("Name: " + name);
+            } else {
+                System.out.println("Name is absent.");
+            }
+
+            // Create an empty Optional
+            Optional<String> emptyOptional = Optional.empty();
+
+            // Check if a value is present in the empty Optional
+            if (!emptyOptional.isPresent()) {
+                System.out.println("Empty Optional is absent.");
+            }
+        }
+    }
+
+    In this short example:
+
+    - We create an `Optional` with a non-null value ("Alice") using `Optional.of("Alice")`.
+    - We check if a value is present in the `optionalName` using `isPresent()`.
+    - If a value is present, we retrieve it using `get()` and print it.
+    - We also create an empty `Optional` using `Optional.empty()` and check if a value is 
+      absent using `isPresent()`.

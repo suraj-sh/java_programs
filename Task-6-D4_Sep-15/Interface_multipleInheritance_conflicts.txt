@@ -1,0 +1,20 @@
+13.5  Discuss how conflicts in multiple inheritance are resolved using interfaces.
+
+->  In Java, conflicts in multiple inheritance are resolved using interfaces by 
+    applying the following rules:
+
+    1. Method Overriding: If a class implements multiple interfaces, and those interfaces contain 
+       methods with the same signature, the class must provide its own implementation for that 
+       method to resolve the conflict.
+
+    2. Default Methods: If multiple interfaces provide default method implementations with the same name, 
+       a conflict arises. In this case, the implementing class must override the conflicting method to 
+       specify which implementation to use.
+
+    3. Interface Order: If a class implements multiple interfaces, and those interfaces have default 
+       methods with the same name, the method from the first interface listed in the class's `implements` 
+       clause takes precedence.
+
+    These rules ensure that conflicts in multiple inheritance are resolved by requiring the implementing 
+    class to explicitly specify which method implementation to use, either by providing its own implementation 
+    or by determining the order of precedence based on the interface order in the `implements` clause.

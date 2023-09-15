@@ -1,0 +1,18 @@
+14.5  Discuss the significance of the Instant class in new DateTime APIs.
+
+->  The `Instant` class in the new DateTime APIs is significant because it represents 
+    a point in time, typically expressed in seconds and nanoseconds since the Unix epoch 
+    (January 1, 1970, at 00:00:00 UTC).
+
+    - `Instant` is used for precise timestamping and measuring time intervals, 
+       making it valuable in scenarios such as logging, performance profiling, 
+       and network communication where exact timing is essential.
+
+    - It provides a consistent and unambiguous way to represent time across different 
+      systems and time zones, ensuring interoperability and accuracy in time-related operations.
+
+    - `Instant` is also essential for calculating time differences, measuring the duration 
+       between events, and performing various time-related calculations in a standardized manner.
+
+    In summary, `Instant` is a fundamental class in the DateTime APIs for dealing with precise 
+    points in time, making it crucial for applications that require accurate timekeeping and synchronization.

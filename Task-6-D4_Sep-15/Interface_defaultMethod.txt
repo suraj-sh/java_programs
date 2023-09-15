@@ -1,0 +1,39 @@
+13.2 Provide an example of a default method in an interface. 
+
+->  Default method in an interface in Java:
+
+    // Define an interface with a default method
+    interface Greeting {
+        void greet(); // Abstract method
+
+        default void defaultGreet() {
+            System.out.println("Hello, from the defaultGreet method!"); // Default method
+        }
+    }
+
+    // Create a class that implements the interface
+    class EnglishGreeting implements Greeting {
+        @Override
+        public void greet() {
+            System.out.println("Hello, World!");
+        }
+    }
+
+    public class DefaultMethodExample {
+        public static void main(String[] args) {
+            Greeting englishGreeting = new EnglishGreeting();
+            
+            englishGreeting.greet();         // Calls the overridden greet method
+            englishGreeting.defaultGreet();  // Calls the defaultGreet method
+        }
+    }
+
+    In this example:
+
+    - We define an interface called `Greeting` with two methods: `greet()` (an abstract method) 
+      and `defaultGreet()` (a default method).
+    - The `EnglishGreeting` class implements the `Greeting` interface and provides an implementation 
+      for the `greet()` method.
+    - In the `main` method, we create an instance of `EnglishGreeting` and call both the `greet()` 
+      method (which is overridden) and the `defaultGreet()` method (which is a default method).
+

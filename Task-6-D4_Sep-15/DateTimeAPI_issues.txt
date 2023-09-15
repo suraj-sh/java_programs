@@ -1,0 +1,25 @@
+14.1  What issues did the new DateTime APIs in Java 8 address?
+
+->  The new DateTime APIs introduced in Java 8 addressed several issues with the 
+    previous `java.util.Date` and `java.util.Calendar` classes, including:
+
+    1. Immutability: The new APIs provide immutable date and time classes, 
+       which are thread-safe and prevent accidental modification of date and time values.
+
+    2. Clarity and Simplicity: They offer a more intuitive and user-friendly API for working 
+       with dates and times, making code easier to read and maintain.
+
+    3. Consistency: The new APIs resolve inconsistencies and ambiguities in the old date and 
+       time classes, leading to fewer bugs and more predictable behavior.
+
+    4. Timezone Handling: Improved handling of timezones and daylight saving time, reducing 
+       common timezone-related issues.
+
+    5. Precision: Greater precision for representing time, including nanoseconds, making it 
+       suitable for high-resolution timestamping.
+
+    6. Interoperability: Better interoperability with external systems and libraries through 
+       standardized ISO date and time formats.
+
+    Overall, Java 8's new DateTime APIs addressed these issues to provide a more robust, 
+    flexible, and user-friendly approach to working with date and time in Java.

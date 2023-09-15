@@ -1,0 +1,59 @@
+13.1  Introduce the concept of default and static methods in interfaces.
+
+->  In Java, starting from Java 8, interfaces can have two new types of methods: 
+    default methods and static methods.
+
+    1. Default Methods:
+        - Default methods are methods defined within an interface that provide a default implementation.
+        - They allow you to add new methods to an existing interface without breaking the classes 
+        that already use that interface.
+        - Default methods are marked with the `default` keyword.
+    
+        Example:
+
+        interface Vehicle {
+            void start();
+            
+            default void honk() {
+                System.out.println("Honking the horn");
+            }
+        }
+        
+        class Car implements Vehicle {
+            @Override
+            public void start() {
+                System.out.println("Car is starting");
+            }
+        }
+
+        In this example, the `honk` method is a default method in the `Vehicle` interface. 
+        Classes implementing `Vehicle` can use this method or provide their own implementation.
+
+    2. Static Methods:
+        - Static methods in interfaces are methods that belong to the interface itself, 
+        not to instances of classes that implement the interface.
+        - They are used for utility functions or methods that don't depend on the state of 
+        the implementing classes.
+        - Static methods are marked with the `static` keyword.
+        
+        Example:
+
+        interface MathOperation {
+            static int add(int a, int b) {
+                return a + b;
+            }
+        }
+        
+        public class Calculator implements MathOperation {
+            public static void main(String[] args) {
+                int result = MathOperation.add(5, 3); // Calling the static method
+                System.out.println("Result: " + result);
+            }
+        }
+    
+        In this example, the `add` method is a static method in the `MathOperation` interface, 
+        and you can call it directly on the interface itself.
+
+    Default and static methods in interfaces provide greater flexibility and backward compatibility 
+    when evolving your codebase by allowing you to add new methods and utility functions to interfaces 
+    without affecting existing implementations.

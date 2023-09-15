@@ -1,0 +1,24 @@
+14.3  Explain the concept of LocalDateTime and converting between LocalDate and LocalTime.
+
+->  LocalDateTime combines a `LocalDate` (date without time) and a `LocalTime` (time without date) 
+    into a single object, representing a date and time together.
+
+    - Creating a `LocalDateTime` Instance:
+   
+        LocalDateTime dateTime = LocalDateTime.of(2023, 9, 15, 14, 30); // Year, Month, Day, Hour, Minute
+
+    - Converting `LocalDate` to `LocalDateTime`:
+   
+        LocalDate date = LocalDate.of(2023, 9, 15);
+        LocalDateTime dateTimeFromDate = date.atStartOfDay(); // Sets time to midnight
+ 
+
+    - Converting `LocalTime` to `LocalDateTime`:
+   
+        LocalTime time = LocalTime.of(14, 30);
+        LocalDateTime dateTimeFromTime = time.atDate(LocalDate.of(2023, 9, 15)); // Sets date to a specific date
+  
+
+    `LocalDateTime` is useful when you need to work with both date and time information together. 
+    You can easily convert between `LocalDate` and `LocalTime` by using methods like `atStartOfDay()` 
+    or specifying a date using `atDate()`.

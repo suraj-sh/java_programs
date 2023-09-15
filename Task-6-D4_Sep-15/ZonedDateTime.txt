@@ -1,0 +1,10 @@
+14.6  What is a ZonedDateTime and how does it handle time zones?
+
+->  A `ZonedDateTime` represents a date and time along with its corresponding time zone information. 
+    It handles time zones by including both the local date and time and the specific time zone offset, 
+    allowing it to unambiguously identify a moment in time, even when considering daylight saving time 
+    changes and time zone transitions.
+
+    In `ZonedDateTime`, the time zone offset is automatically adjusted to account for daylight saving time, 
+    making it suitable for applications that need to work with date and time information across different 
+    time zones while considering local rules and adjustments.

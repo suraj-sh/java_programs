@@ -1,0 +1,82 @@
+12.3  How do you retrieve values from an Optional object using orElse(), orElseGet(), and orElseThrow()?
+
+->  Using `orElse()`, `orElseGet()`, and `orElseThrow()` with `Optional`:
+
+    1. `orElse(defaultValue)`:
+        - Use `orElse(defaultValue)` to get the value if it's present or a default value if it's absent.
+
+        import java.util.Optional;
+
+        public class OptionalExamples {
+            public static void main(String[] args) {
+                Optional<String> optionalName = Optional.of("Alice");
+                
+                // Retrieve the value or use a default value
+                String name = optionalName.orElse("Unknown");
+                System.out.println("Name: " + name); // Output: Name: Alice
+                
+                Optional<String> emptyOptional = Optional.empty();
+                
+                // Retrieve the value or use a default value for an empty Optional
+                String defaultName = emptyOptional.orElse("Unknown");
+                System.out.println("Default Name: " + defaultName); // Output: Default Name: Unknown
+            }
+        }
+
+
+    2. `orElseGet(supplier)`:
+        - Use `orElseGet(supplier)` to get the value if it's present or compute a value using a 
+          `Supplier` if it's absent.
+
+        import java.util.Optional;
+
+        public class OptionalExamples {
+            public static void main(String[] args) {
+                Optional<String> optionalName = Optional.of("Alice");
+                
+                // Retrieve the value or compute a default value
+                String name = optionalName.orElseGet(() -> {
+                    // Perform some computation to get a default value
+                    return "Unknown";
+                });
+                System.out.println("Name: " + name); // Output: Name: Alice
+                
+                Optional<String> emptyOptional = Optional.empty();
+                
+                // Retrieve the value or compute a default value for an empty Optional
+                String defaultName = emptyOptional.orElseGet(() -> "Unknown");
+                System.out.println("Default Name: " + defaultName); // Output: Default Name: Unknown
+            }
+        }
+
+
+    3. `orElseThrow(exceptionSupplier)`:
+        - Use `orElseThrow(exceptionSupplier)` to get the value if it's present or throw an 
+          exception using a `Supplier` if it's absent.
+
+        import java.util.Optional;
+
+        public class OptionalExamples {
+            public static void main(String[] args) {
+                Optional<String> optionalName = Optional.of("Alice");
+                
+                // Retrieve the value or throw an exception if it's absent
+                String name = optionalName.orElseThrow(() -> new IllegalArgumentException("Name not found"));
+                System.out.println("Name: " + name); // Output: Name: Alice
+                
+                Optional<String> emptyOptional = Optional.empty();
+                
+                // Attempt to retrieve the value or throw an exception for an empty Optional
+                try {
+                    String invalidName = emptyOptional.orElseThrow(() -> new IllegalArgumentException("Name not found"));
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Exception: " + e.getMessage()); // Output: Exception: Name not found
+                }
+            }
+        }
+
+    In these examples:
+
+    - `orElse()` provides a default value if the `Optional` is empty.
+    - `orElseGet()` allows you to compute a default value using a `Supplier`.
+    - `orElseThrow()` throws an exception with a custom message if the `Optional` is empty.

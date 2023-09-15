@@ -1,0 +1,14 @@
+14.4  How can you represent durations using the Duration class?
+
+->  You can represent durations using the `Duration` class in Java by specifying the 
+    amount of time in seconds and nanoseconds:
+
+    Duration duration = Duration.ofSeconds(30); // Represents 30 seconds
+
+    You can also include nanoseconds:
+
+    Duration duration = Duration.ofSeconds(30, 500_000_000); // Represents 30 seconds and 500 milliseconds
+
+    Once you have a `Duration` instance, you can perform various operations like addition, 
+    subtraction, and comparisons to work with durations in your Java code. 
+    This class is particularly useful for measuring and working with time intervals.

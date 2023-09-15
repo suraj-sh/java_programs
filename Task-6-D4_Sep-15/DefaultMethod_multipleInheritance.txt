@@ -1,0 +1,55 @@
+13.4  Explain the concept of multiple inheritance with default methods.
+
+->  In Java, multiple inheritance refers to a situation where a class inherits from more than one class. 
+    However, Java does not support multiple inheritance of classes (i.e., a class cannot extend 
+    more than one class). To overcome this limitation, Java introduced the concept of multiple inheritance 
+    through interfaces with default methods.
+
+    Multiple Inheritance with Default Methods:
+        - In Java, a class can implement multiple interfaces, allowing it to inherit multiple sets of behaviors.
+        - Interfaces can include both abstract (unimplemented) methods and default (implemented) methods.
+        - A class that implements multiple interfaces can inherit the default method implementations from 
+        those interfaces.
+
+    Example:
+
+    interface Animal {
+        default void eat() {
+            System.out.println("Animal is eating.");
+        }
+    }
+
+    interface Bird {
+        default void eat() {
+            System.out.println("Bird is eating.");
+        }
+    }
+
+    class Parrot implements Animal, Bird {
+        // The Parrot class inherits the default eat() method from both Animal and Bird interfaces
+        public void speak() {
+            System.out.println("Parrot is speaking.");
+        }
+    }
+
+    public class MultipleInheritanceExample {
+        public static void main(String[] args) {
+            Parrot parrot = new Parrot();
+            parrot.eat();   // Calls the default eat() method from the Animal interface
+            parrot.speak(); // Calls the speak() method of the Parrot class
+        }
+    }
+
+    In this example:
+
+    - The `Animal` and `Bird` interfaces both define a default `eat()` method with their 
+      own implementations.
+    - The `Parrot` class implements both `Animal` and `Bird` interfaces, inheriting the `eat()` 
+      method implementations from both.
+    - When you create an instance of `Parrot` and call the `eat()` method, it calls the default 
+      `eat()` method from the `Animal` interface because Java resolves conflicts by choosing the 
+      method from the first interface it encounters.
+
+    This is how Java allows for multiple inheritance of behavior through interfaces with default methods, 
+    helping to avoid the diamond problem (a conflict that can arise in languages that support multiple 
+    inheritance of classes).
