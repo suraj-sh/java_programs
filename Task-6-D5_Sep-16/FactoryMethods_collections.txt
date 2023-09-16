@@ -1,0 +1,15 @@
+17.1  Introduce the concept of factory methods for collections.
+
+->  Factory methods for collections in Java are static methods provided by various collection 
+    classes (e.g., `ArrayList`, `HashSet`) to create instances of those collections. 
+    These factory methods offer a concise and convenient way to create and initialize collections.
+
+    Example:
+
+        List<String> list = List.of("Apple", "Banana", "Cherry");
+        Set<Integer> set = Set.of(1, 2, 3, 4, 5);
+
+
+    In this short and simple manner, factory methods make it easier to create immutable or 
+    mutable collections with initial values, reducing the need for verbose constructor calls 
+    and manual population of elements.

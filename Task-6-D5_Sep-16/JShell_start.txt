@@ -1,0 +1,17 @@
+15.3  How do you start using JShell to execute Java code interactively?
+
+->  To start using JShell to execute Java code interactively:
+
+    1. Open a Terminal or Command Prompt:
+        - Open your system's terminal or command prompt.
+
+    2. Launch JShell:
+        - Simply type `jshell` and press Enter.
+
+    3. Start Interacting:
+        - Once JShell is launched, you can start typing Java code snippets and press 
+          Enter to execute them.
+        - JShell will immediately display the results of your code, allowing you to 
+          interactively experiment with Java.
+
+    That's it! You're now ready to use JShell for interactive Java coding and exploration.

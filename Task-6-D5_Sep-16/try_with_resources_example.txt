@@ -1,0 +1,29 @@
+18.2  Provide an example demonstrating the usage of try-with-resources.
+
+->  Example demonstrating the usage of try-with-resources to automatically close a file stream:
+
+        import java.io.*;
+
+        public class TryWithResourcesExample {
+            public static void main(String[] args) {
+                try (FileOutputStream fos = new FileOutputStream("example.txt")) {
+                    String data = "Hello, Try-With-Resources!";
+                    byte[] bytes = data.getBytes();
+                    fos.write(bytes);
+                    System.out.println("Data written to file.");
+                } catch (IOException e) {
+                    System.err.println("An error occurred: " + e.getMessage());
+                }
+            }
+        }
+
+    In this example:
+
+    1. We use `try-with-resources` to open a `FileOutputStream` for writing to a file named "example.txt."
+
+    2. Inside the try block, we write a message to the file.
+
+    3. The `try-with-resources` statement automatically closes the `FileOutputStream` when the 
+       block is exited, whether normally or due to an exception.
+
+    This ensures proper resource management and simplifies code for handling I/O operations.

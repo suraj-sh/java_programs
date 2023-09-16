@@ -1,0 +1,22 @@
+20.2  How do these improvements impact garbage collection efficiency?
+
+->  These improvements impact garbage collection efficiency in:
+
+    1. Reduced Pause Times: 
+        The use of techniques like G1 and parallel/concurrent collectors reduces the pause times, 
+        allowing applications to continue running with minimal interruptions.
+
+    2. Adaptive Tuning: 
+        Ergonomics helps Java adapt garbage collection settings for optimal performance, 
+        reducing the need for manual tuning.
+
+    3. Better Memory Management: 
+        G1 collector and other enhancements manage memory more efficiently, 
+        reducing fragmentation and improving overall memory usage.
+
+    4. Low-Latency: 
+        Garbage collection improvements make Java suitable for low-latency and real-time 
+        applications where minimal pause times are crucial.
+
+    In summary, these improvements make garbage collection in Java more efficient by 
+    minimizing pause times, improving memory management, and enhancing adaptability.

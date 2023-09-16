@@ -1,0 +1,18 @@
+24.2  Provide an example of a switch expression with multiple cases and a default action.
+
+->  Example of a switch expression with multiple cases and a default action:
+
+        int month = 6;
+        String season = switch (month) {
+            case 12, 1, 2 -> "Winter";
+            case 3, 4, 5 -> "Spring";
+            case 6, 7, 8 -> "Summer";
+            case 9, 10, 11 -> "Autumn";
+            default -> "Unknown";
+        };
+
+    In this example:
+
+    - We use multiple cases separated by commas to match multiple values for each season.
+    - The `default` case handles any month not covered by the specific cases.
+    - The switch expression returns the appropriate season based on the value of the `month` variable.

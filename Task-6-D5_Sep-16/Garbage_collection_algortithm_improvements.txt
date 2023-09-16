@@ -1,0 +1,22 @@
+20.1  Explain the improvements made to the garbage collection algorithm in Java.
+
+->  Improvements to the garbage collection algorithm in Java:
+
+    1. G1 Garbage Collector: 
+        The Garbage-First (G1) Garbage Collector introduced better memory management 
+        and reduced pause times for applications with large heaps.
+
+    2. Parallel and Concurrent: 
+        Modern garbage collectors use parallel and concurrent techniques to minimize 
+        application pause times, making Java more responsive.
+
+    3. Ergonomics: 
+        Java's garbage collectors have improved adaptive tuning (ergonomics) to automatically 
+        adjust heap sizes and collector parameters for better performance.
+
+    4. Low-Latency: 
+        The focus has been on reducing garbage collection pause times, making Java more 
+        suitable for real-time and interactive applications.
+
+    In summary, these improvements enhance Java's garbage collection performance, 
+    making it more efficient, responsive, and adaptable to various application scenarios.

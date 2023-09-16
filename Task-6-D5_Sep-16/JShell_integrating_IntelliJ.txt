@@ -1,0 +1,23 @@
+15.7  How can you integrate JShell with IntelliJ IDEA?
+
+->  To integrate JShell with IntelliJ IDEA:
+
+    1. Ensure JDK 9 or Later:
+        - Make sure you have Java Development Kit (JDK) 9 or a later version installed on your system.
+
+    2. Create a New JShell Run Configuration:
+        - Open your IntelliJ IDEA project.
+        - Go to "Run" > "Edit Configurations..."
+        - Click the "+" icon and select "JShell" from the list of configurations.
+
+    3. Configure the JShell Run Configuration:
+        - In the JShell run configuration settings, you can specify the JDK version to use, arguments, 
+          and working directory as needed.
+
+    4. Run JShell:
+        - Click "OK" to save the configuration.
+        - You can now run JShell by selecting the configuration from the dropdown next to the "Run" 
+          button or using the keyboard shortcut (Shift + F10 by default).
+
+    IntelliJ IDEA will launch JShell with the specified configuration, allowing you to use JShell 
+    within your development environment.

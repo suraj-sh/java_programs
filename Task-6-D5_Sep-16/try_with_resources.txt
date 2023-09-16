@@ -1,0 +1,22 @@
+18.1  Explain the purpose of the try-with-resources statement in Java.
+
+->  Try-with-resources is typically used within a Java program to automatically 
+    close resources like files, streams, or connections. 
+    
+    Here's a brief example of how it works within a Java program:
+
+        import java.io.FileInputStream;
+        import java.io.IOException;
+
+        public class Example {
+            public static void main(String[] args) {
+                try (FileInputStream inputStream = new FileInputStream("example.txt")) {
+                    // Use the inputStream
+                } catch (IOException e) {
+                    // Handle exceptions
+                }
+            }
+        }
+
+    In this code, the `try-with-resources` statement ensures that the `FileInputStream` 
+    is automatically closed when the block is exited, whether normally or due to an exception.

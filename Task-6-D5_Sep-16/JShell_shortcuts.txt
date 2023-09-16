@@ -1,0 +1,24 @@
+15.5  List and explain the shortcuts available in JShell.
+
+->  Shortcuts available in JShell:
+
+    1. Tab Completion: 
+        Press the `Tab` key to auto-complete class and method names, making code entry faster.
+
+    2. Up/Down Arrow Keys: 
+        Use the `Up` and `Down` arrow keys to navigate through your command history, 
+        making it easy to revisit and modify previous commands.
+
+    3. Ctrl+L: 
+        Clears the screen, providing a clean workspace.
+
+    4. Ctrl+D: 
+        Exits JShell when pressed at the beginning of a line.
+
+    5. Ctrl+/: 
+        Toggles comments for selected lines or comments out the current line.
+
+    6. Ctrl+C: 
+        Interrupts the current evaluation or input.
+
+    These shortcuts enhance the usability of JShell and help streamline your interactive Java coding experience.

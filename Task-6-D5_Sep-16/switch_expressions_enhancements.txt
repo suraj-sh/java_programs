@@ -1,0 +1,27 @@
+25.1  Explain the enhancements made to switch expressions in Java 13.
+
+->  In Java 13, enhancements to switch expressions include simplifying the syntax even further. 
+    The `break` statement is no longer needed for individual case labels, making the code more 
+    concise and readable.
+
+    Example in Java 12 (prior to enhancement):
+
+        int dayOfWeek = 3;
+        String dayName = switch (dayOfWeek) {
+            case 1, 2, 3, 4, 5 -> "Weekday";
+            case 6, 7 -> "Weekend";
+            default -> "Invalid";
+        };
+
+    Enhanced in Java 13:
+    
+        int dayOfWeek = 3;
+        String dayName = switch (dayOfWeek) {
+            case 1, 2, 3, 4, 5 -> "Weekday";
+            case 6, 7 -> "Weekend";
+            default -> "Invalid";
+        };
+
+
+    In this short and simple manner, Java 13 enhances switch expressions by removing the need 
+    for explicit `break` statements within case labels, further improving code readability and brevity.

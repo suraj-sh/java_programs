@@ -1,0 +1,23 @@
+16.3  Explain how to create and structure a modular application.  
+
+->  To create and structure a modular application in Java:
+
+    1. Create Module Declarations:
+        - Define modules using `module-info.java` files. Each module declares its name, 
+          dependencies, and what it exports.
+
+    2. Organize Code into Packages:
+        - Organize your code into packages to group related classes together.
+
+    3. Compile Modules:
+        - Compile the modules using the `javac` command, specifying the module path 
+          and module source path.
+
+    4. Run the Application:
+        - Run the application using the `java` command, specifying the main module and class.
+
+    5. Repeat for Additional Modules:
+        - If your application has multiple modules, repeat steps 1-4 for each module.
+
+    This modular structure enhances code organization, maintainability, and encapsulation 
+    while allowing you to manage dependencies between different parts of your application.

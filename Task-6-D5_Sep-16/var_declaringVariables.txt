@@ -1,0 +1,36 @@
+19.2  Provide examples showcasing how var can be used to declare variables.
+
+->  Examples showcasing how the `var` keyword can be used to declare variables in Java:
+
+    1. Initializing an Integer Variable:
+    
+        var number = 42; // Compiler infers the type as int
+    
+
+    2. Initializing a String Variable:
+    
+        var text = "Hello, Java!"; // Compiler infers the type as String
+    
+
+    3. Working with Arrays:
+    
+        var numbers = new int[]{1, 2, 3, 4}; // Compiler infers the type as int[]
+        var names = new String[]{"Alice", "Bob", "Charlie"}; // Compiler infers the type as String[]
+    
+
+    4. Iterating through Collections:
+    
+        var list = List.of("Apple", "Banana", "Cherry"); // Compiler infers the type as List<String>
+        for (var item : list) {
+            System.out.println(item);
+        }
+    
+
+    5. Using with Lambda Expressions:
+    
+        var numbers = List.of(1, 2, 3, 4, 5);
+        var sum = numbers.stream().mapToInt(Integer::intValue).sum(); // Compiler infers the type as int
+    
+
+    These examples demonstrate how `var` simplifies variable declarations by allowing the 
+    compiler to automatically determine the appropriate data type based on the initialization.

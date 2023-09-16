@@ -1,0 +1,21 @@
+15.4  Describe the use of snippets, list, and drop commands in JShell.
+
+->  Use of `snippets`, `list`, and `drop` commands in JShell:
+
+    1. `snippets` Command:
+        - Use the `snippets` command in JShell to display a list of all code snippets 
+          entered during the current session.
+        - It helps you keep track of the code you've executed interactively.
+
+    2. `list` Command:
+        - The `list` command is used to display a list of all valid code snippets 
+          and classes defined in the current session.
+        - It shows both successfully compiled code and code with errors.
+        - Useful for reviewing your code and its outcomes.
+
+    3. `drop` Command:
+        - The `drop` command removes a code snippet or class definition from the current session.
+        - Use it to discard code that you no longer need or to clear errors without restarting JShell.
+
+    In summary, `snippets` lists the code snippets, `list` displays all code, and `drop` removes 
+    unwanted code in your JShell session, making it easier to manage and explore Java code interactively.

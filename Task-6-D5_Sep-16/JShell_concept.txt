@@ -1,0 +1,23 @@
+15.2  Introduce the concept of JShell (Java Shell) and its purpose.
+
+->  JShell (Java Shell) is an interactive command-line tool introduced in Java 9 
+    that provides a Read-Eval-Print Loop (REPL) environment for Java programming. 
+    
+    Its purpose is to:
+
+    - Simplify Code Exploration: 
+      JShell allows developers to quickly test Java code snippets, explore language features, 
+      and experiment with APIs without the need to create full Java programs or compile code.
+
+    - Rapid Prototyping: 
+      It is valuable for prototyping, trying out new ideas, and debugging small code segments interactively.
+
+    - Learning Tool: 
+      JShell is an excellent educational tool for learning Java and understanding how various Java 
+      constructs work in practice.
+
+    - Debugging and Problem Solving: It helps in interactively diagnosing issues and testing solutions 
+      in a controlled environment.
+
+    In summary, JShell makes it easier for developers to interactively work with Java code, 
+    speeding up the learning process and simplifying code exploration and debugging tasks.

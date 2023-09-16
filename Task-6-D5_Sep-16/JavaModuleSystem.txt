@@ -1,0 +1,23 @@
+16.1  What is the Java Module System, and why was it introduced?
+
+->  The Java Module System, introduced in Java 9, is a feature that brings modularity 
+    to the Java platform. 
+    
+    Its primary purposes are:
+
+    1. Encapsulation: 
+        It allows developers to define clear boundaries (modules) around groups of related code, 
+        encapsulating their internal details. This enhances code organization and reduces unintended 
+        dependencies between parts of a program.
+
+    2. Maintainability: 
+        By promoting modular code, the module system makes it easier to manage and maintain 
+        large-scale Java applications. It helps in isolating and updating specific modules without 
+        affecting the entire application.
+
+    3. Security: 
+        Modules provide strong encapsulation, reducing the risk of unauthorized access to internal 
+        code components. This enhances security by limiting the visibility of implementation details.
+
+    In summary, the Java Module System was introduced to improve code organization, maintainability, 
+    and security in Java applications by introducing a modular structure to the language.

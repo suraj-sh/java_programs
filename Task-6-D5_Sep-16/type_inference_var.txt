@@ -1,0 +1,14 @@
+19.1  Introduce the concept of type inference with the var keyword.
+
+->  Type inference with the `var` keyword is a feature in Java that allows 
+    the compiler to automatically determine the data type of a variable based 
+    on its initialization. It simplifies variable declarations by reducing the 
+    need for explicit type annotations.
+
+    Example:
+
+        var number = 42; // Compiler infers the type as int
+        var text = "Hello, Java!"; // Compiler infers the type as String
+
+    In this short and simple manner, the `var` keyword enhances code readability and 
+    reduces verbosity when declaring variables in Java.

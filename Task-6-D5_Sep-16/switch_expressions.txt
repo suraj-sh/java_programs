@@ -1,0 +1,20 @@
+24.1  Introduce the concept of switch expressions in Java 12.
+
+->  Switch expressions in Java 12 introduce a more concise and expressive way to write switch statements. 
+    They allow a switch to return a value directly, making code shorter and more readable.
+
+    Example:
+
+        int dayOfWeek = 3;
+        String dayName = switch (dayOfWeek) {
+            case 1 -> "Monday";
+            case 2 -> "Tuesday";
+            case 3 -> "Wednesday";
+            case 4 -> "Thursday";
+            case 5 -> "Friday";
+            default -> "Weekend";
+        };
+        
+
+    In a short and simple manner, switch expressions improve the readability and maintainability 
+    of Java code by providing a more compact syntax for switch statements that return values.

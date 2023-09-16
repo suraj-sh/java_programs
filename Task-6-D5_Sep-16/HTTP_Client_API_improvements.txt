@@ -1,0 +1,24 @@
+23.2  How does the new HTTP Client API improve over the older HttpURLConnection?
+
+->  The new HTTP Client API in Java 11 improves over the older HttpURLConnection in:
+
+    1. Modern API: 
+        The new API offers a more modern and user-friendly interface compared to the older, 
+        verbose HttpURLConnection.
+
+    2. Asynchronous Support: 
+        It supports asynchronous requests, allowing applications to perform other tasks 
+        while waiting for HTTP responses, enhancing performance and responsiveness.
+
+    3. Reactive Programming: 
+        Integrates well with reactive programming libraries, making it suitable for 
+        building reactive and event-driven applications.
+
+    4. HTTP/2 Native Support: 
+        Provides native support for the efficient HTTP/2 protocol, which HttpURLConnection lacks.
+
+    5. Easier Handling: 
+        Simplifies request and response handling, reducing the amount of boilerplate code required.
+
+    In summary, the new HTTP Client API is a more versatile, efficient, and modern solution 
+    for handling HTTP requests and responses in Java applications compared to the older HttpURLConnection.

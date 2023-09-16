@@ -1,0 +1,17 @@
+22.2  Explain the purpose and use cases of the Epsilon GC.
+
+->  The purpose and use cases of the Epsilon Garbage Collector (GC) in Java:
+
+    Purpose:
+        - Epsilon GC is designed for performance testing and debugging.
+        - It serves as a "no-op" collector, not performing any memory reclamation.
+
+    Use Cases:
+        - Performance Testing: Use Epsilon GC to assess application performance with 
+          garbage collection effectively turned off.
+        - Debugging: It helps identify performance bottlenecks related to memory management.
+        - Benchmarking: Useful for comparing application performance under different garbage 
+          collection scenarios.
+
+    In summary, Epsilon GC is used to measure the impact of garbage collection on performance 
+    and debug memory-related issues in Java applications.

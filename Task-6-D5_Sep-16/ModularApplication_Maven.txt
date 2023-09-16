@@ -1,0 +1,18 @@
+16.4  How does Maven support modular applications?
+
+->  Maven supports modular applications in Java through its project 
+    structure and dependency management:
+
+    1. Project Structure: 
+        Maven encourages modularization by organizing code into separate 
+        modules (projects) within a multi-module project structure.
+
+    2. Dependency Management: 
+        Maven simplifies dependency management by allowing you to specify 
+        dependencies between modules (projects) in the `pom.xml` files. 
+        This makes it easy to declare and manage dependencies between modules 
+        in your modular application.
+
+    In summary, Maven's project structure and dependency management make it convenient 
+    to develop, build, and manage modular applications by providing a clear way to 
+    organize code into modules and specify module dependencies.

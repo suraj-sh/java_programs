@@ -1,0 +1,35 @@
+21.2  Provide examples of using var with lambda expressions
+
+->  Examples of using the `var` keyword with lambda expressions in Java:
+
+    1. Using `var` for Lambda Parameter:
+    
+        // Without var
+        (String text) -> text.length();
+        
+        // With var
+        (var text) -> text.length();
+    
+
+    2. Using `var` for Multiple Parameters:
+    
+        // Without var
+        (int a, int b) -> a + b;
+        
+        // With var
+        (var a, var b) -> a + b;
+    
+
+    3. Using `var` for Stream Mapping:
+    
+        List<String> fruits = List.of("Apple", "Banana", "Cherry");
+        
+        // Without var
+        List<Integer> lengths = fruits.stream().map(String::length).collect(Collectors.toList());
+        
+        // With var
+        List<Integer> lengths = fruits.stream().map(var fruit -> fruit.length()).collect(Collectors.toList());
+        
+
+    These examples demonstrate how the `var` keyword simplifies lambda expressions by 
+    inferring parameter types, making the code shorter and more readable.

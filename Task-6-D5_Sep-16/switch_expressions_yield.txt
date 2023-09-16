@@ -1,0 +1,33 @@
+25.2  Demonstrate the usage of switch expressions with the yield keyword.
+
+->  In Java, starting from version 14, you can use the `yield` keyword with 
+    switch expressions to return a value from a case. 
+    
+    Here's an example:
+
+        public enum Season {
+            SPRING, SUMMER, AUTUMN, WINTER
+        }
+
+        public static String getSeasonDescription(Season season) {
+            return switch (season) {
+                case SPRING -> "Flowers are blooming.";
+                case SUMMER -> "Enjoy the sun and warmth.";
+                case AUTUMN -> "Leaves are falling.";
+                case WINTER -> {
+                    yield "Time for snow and holidays.";
+                }
+            };
+        }
+        
+
+    In this example:
+
+    - We define an enum `Season`.
+    - The `getSeasonDescription` method uses a switch expression to provide a description 
+      for each season.
+    - The `WINTER` case uses the `yield` keyword to return a value, which is 
+      "Time for snow and holidays."
+
+    This demonstrates how you can use the `yield` keyword in a switch expression to return 
+    a value from a specific case.

@@ -1,0 +1,17 @@
+15.1  Explain how to set up Java environment variables for Java Shell (JShell).
+
+->  To set up Java environment variables for Java Shell (JShell):
+
+    1. Install Java:
+        - First, ensure you have Java installed on your system.
+
+    2. Set the `PATH` Variable:
+        - Add the path to the Java executable (e.g., `java.exe` or `java` for macOS/Linux) 
+          to your system's `PATH` environment variable.
+        - This allows your system to locate the Java executable when you run JShell.
+
+    With the `PATH` variable correctly configured, you can open a terminal or 
+    command prompt and simply type `jshell` to start the Java Shell.
+
+    Ensure you've installed Java correctly and that the `java` command works in your terminal 
+    before setting up JShell.

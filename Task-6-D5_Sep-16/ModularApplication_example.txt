@@ -1,0 +1,57 @@
+16.2  Provide an example of a modular application.
+
+->  Example of a modular Java application:
+
+    Creating a modular application for a simple calculator with two modules: 
+    `CalculatorApp` and `CalculatorCore`.
+
+    1. `CalculatorCore` Module (core functionality):
+    
+        // CalculatorCore.java
+        module CalculatorCore {
+            exports com.calculator; // Exports the com.calculator package
+        }
+    
+        // Calculator.java (inside com.calculator package)
+        package com.calculator;
+
+        public class Calculator {
+            public int add(int a, int b) {
+                return a + b;
+            }
+
+            public int subtract(int a, int b) {
+                return a - b;
+            }
+        }
+        
+
+    2. `CalculatorApp` Module (application):
+ 
+        // CalculatorApp.java
+        module CalculatorApp {
+            requires CalculatorCore; // Requires the CalculatorCore module
+        }
+        
+        // Main.java
+        import com.calculator.Calculator;
+
+        public class Main {
+            public static void main(String[] args) {
+                Calculator calculator = new Calculator();
+                int result = calculator.add(10, 5);
+                System.out.println("Addition Result: " + result);
+            }
+        }
+    
+
+    In this example:
+
+    - `CalculatorCore` defines the core functionality (addition and subtraction) 
+       and exports the `com.calculator` package.
+    - `CalculatorApp` is an application module that requires `CalculatorCore`.
+    - `Main.java` in the `CalculatorApp` module uses the `Calculator` class from 
+      `CalculatorCore` to perform addition.
+
+    This modular structure separates the core calculator functionality from the application, 
+    making the code more organized and maintainable.

@@ -1,0 +1,26 @@
+21.1  Describe the addition of the var keyword to lambda expressions.
+
+->  The addition of the `var` keyword to lambda expressions in Java allows for 
+    concise and readable code by inferring the parameter types. It simplifies lambda declarations, 
+    making them more compact and easier to understand.
+
+    Example:
+
+        Without `var`:
+
+        (Function<Integer, String> converter) -> {
+            Integer value = 42;
+            return converter.apply(value);
+        }
+
+
+        With `var`:
+
+        (converter) -> {
+            var value = 42;
+            return converter.apply(value);
+        }
+
+
+    In a short and simple manner, the `var` keyword in lambda expressions reduces verbosity 
+    and improves code readability while maintaining type safety.

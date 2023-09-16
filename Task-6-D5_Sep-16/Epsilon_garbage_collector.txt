@@ -1,0 +1,11 @@
+22.1  Introduce the concept of the Epsilon Garbage Collector.
+
+->  The Epsilon Garbage Collector is a specialized garbage collector introduced in Java 
+    to serve as a "no-op" collector. It doesn't perform any memory reclamation and is 
+    used primarily for performance testing and debugging purposes. It allows developers 
+    to measure the performance impact of garbage collection in Java applications by 
+    effectively turning off garbage collection.
+
+    In a short and simple manner, the Epsilon Garbage Collector helps assess how an 
+    application behaves when garbage collection is disabled, providing insights into 
+    the impact of memory management on performance.

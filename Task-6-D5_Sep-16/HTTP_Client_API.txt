@@ -1,0 +1,28 @@
+23.1  Describe the new HTTP Client API introduced in Java 11.
+
+->  The new HTTP Client API introduced in Java 11 provides a modern and flexible way to 
+    send HTTP requests and receive responses. It simplifies HTTP communication in Java 
+    applications with features like asynchronous requests and reactive programming support.
+
+    Key Points:
+
+    - Modular and Efficient: 
+        Part of the Java standard library, it's modular and efficient, suitable for 
+        both traditional and microservices-based applications.
+
+    - Async Support: 
+        Supports asynchronous requests, allowing applications to continue 
+        processing while waiting for responses.
+
+    - Reactive Programming: 
+        Integrates well with reactive programming libraries like Reactor and 
+        RxJava for building reactive applications.
+
+    - HTTP/2 Support: 
+        Offers native support for HTTP/2, a more efficient and faster protocol.
+
+    - Ease of Use: 
+        Provides a straightforward API for making HTTP requests and handling responses.
+
+    In a short and simple manner, the Java 11 HTTP Client API simplifies HTTP communication 
+    and brings modern features to Java applications.

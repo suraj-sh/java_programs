@@ -1,0 +1,27 @@
+17.2  Describe the advantages of using factory methods to create collections.
+
+->  Advantages of using factory methods to create collections:
+
+    1. Concise Initialization: 
+        Factory methods provide a concise way to create and initialize collections 
+        with values in a single line of code.
+
+    2. Immutable Collections: 
+        Factory methods allow the creation of immutable collections, 
+        ensuring that the collection cannot be modified after creation, 
+        which is useful for immutability and thread safety.
+
+    3. Type Inference: 
+        They offer type inference, making it unnecessary to specify the 
+        data type of elements explicitly.
+
+    4. Readability: 
+        Factory method calls are often more readable than lengthy constructor 
+        calls with initialization.
+
+    5. Performance: 
+        Factory methods return optimized collection implementations based on the 
+        number of elements, potentially improving performance.
+
+    Overall, factory methods simplify collection creation and improve code readability 
+    while offering options for immutability and performance optimization.
